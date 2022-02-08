@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> layout2 </title>
+    <style> 
+       .box1{width: 960px;
+             height: 150px;
+             background-color: red;
+             margin-left: auto;
+             margin-right: auto;}
+
+        .box2{width: 960px;
+              height: 380px;
+              background-color: blue;
+              margin-left: auto;
+              margin-right: auto;}
+
+        .con1{width: 1000px;
+             margin-left: auto;
+             margin-right: auto;}
+
+        .con:after{content:'';
+                   clear: both;
+                   display: block;}
+
+        .box3{width: 225px;
+              height: 225px;
+              margin-right: 20px;
+              border-radius: 50%;
+              background-color: purple;
+              float:left;}
+    
+    
+    
+    
+    </style>
+</head>
+<body> 
+    <div class="box1"> </div>
+    <div class="box2"> </div>
+    <div class="con1"> 
+       <div class="box3"> </div>
+       <div class="box3"> </div>
+       <div class="box3"> </div>
+       <div class="box3"> </div>
+    </div>
+    <div class="con2"> </div>
+        <div class="box4"> </div>
+        <div class="box4"> </div>
+        <div class="box4"> </div>
+    </div>
+    <div class="box5"> </div>
+</body>
+
+
+
+
+
+
+
+</html>

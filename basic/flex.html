@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        *{margin:0;
+          padding:0;}
+
+        ul{list-style: none;}
+
+        .gnb{display: flex;
+             justify-content: center;}
+
+        .gnb li{margin:0 20px;}
+
+        h1{text-align:center;
+           padding-top: 40px;}
+
+header{width: 940px;
+       margin-left: auto;
+       margin-right: auto;
+       position:relative;}
+
+.util{position: absolute;
+      right:0;
+      top:0;}
+
+.util li{float:left;
+         margin:0 20px;
+         font-size: 14px;
+         color:#666;}
+
+.mainBn{position: relative;}
+
+.bnImg{height: 480px;
+       background-color:blue;}
+
+.pager{display: flex;
+       justify-content: center;
+       position: absolute;
+       width: 100%;
+       bottom: 20px;
+       left:0;}
+
+.pager a{display:block;
+         width: 20px;
+         height: 20px;
+         background-color: blueviolet;
+         border-radius: 50%;
+         margin: 0 5px;}
+
+main{max-width: 940px;
+     margin:35px auto;}
+
+.row1{display: flex;}
+/* flex를 적용시킨 flex-grid내부의아이템은 어지간해서는, 너비가 넘친다고 하더라도 아래로 떨어지지 않는다
+
+   만약 wrap시스템 안에서, 넘치는 item들을 아래로 흘러내려가게끔 자연스럽게 만들고 싶다면,
+   flex-wrap: wrap;을 부모(flex container) 에게 준다*/
+
+.row1 div{width: 50%;
+          height: 190px;
+          background-color:cadetblue;
+          margin-right: 35px;}
+
+.row1 div:last-child{margin-right: 0;}
+
+.row2{display:flex;
+      justify-content: space-between;}
+
+.row2 div{height: 210px;
+          background-color: chartreuse;}
+
+.row2 .box1, .row2 .box3{width: 20%;}
+
+.row2 .box2{width: 40%;}
+
+.row3{display:flex;
+      }
+
+.row3 div{margin-right: 20px;
+          width: 34%;
+          height: 150px;
+          background-color: crimson;}
+
+.row3 div:last-child{margin-right: 0;}
+
+.row4{display:flex;
+      justify-content: space-between;}
+
+.row4 div{margin-right: 20px;
+          width: 35%;
+          height: 150px;
+          background-color: darkgreen;}
+
+.row4 div:last-child{margin-right: 0;}
+
+section{margin-top:20px;}
+
+footer{background-color: darkkhaki;
+       padding:20px 0;}
+
+.fmenu{display:flex;
+       justify-content: center;}
+
+.fmenu li{margin:0 10px;}
+
+address{max-width: 940px;
+        margin-left: auto;
+    margin-right: auto;}
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LOGO</h1>
+        <ul class="gnb">
+            <li>gnb1</li>
+            <li>gnb2</li>
+            <li>gnb3</li>
+            <li>gnb4</li>
+            <li>gnb5</li>
+        </ul>
+
+        <ul class="util">
+            <li>util1</li>
+            <li>util2</li>
+            <li>util3</li>
+            <li>util4</li>
+        </ul>
+    </header>
+
+    
+        <div class="mainBn">
+            <div class="bnImg"></div>
+            <div class="pager">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+        </div>
+    
+<main>
+
+    <section class="row1">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </section>
+
+    <section class="row2">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        
+    </section>
+
+    <section class="row3">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </section>
+
+    <section class="row4">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        
+    </section>
+</main>
+
+    <footer>
+        <ul class="fmenu">
+            <li>fmenu1</li>
+            <li>fmenu2</li>
+            <li>fmenu3</li>
+            <li>fmenu4</li>
+            <li>fmenu5</li>
+        </ul>
+
+    <address>
+        010-0000-0000
+    </address>
+</footer>
+
+</body>
+</html>

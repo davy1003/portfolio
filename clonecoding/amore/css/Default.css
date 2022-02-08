@@ -1,0 +1,334 @@
+
+
+
+/*756px 태블릿 영역*/
+
+@media all and (min-width:756px){
+
+    .slide .mobile{display: none;}
+    .slide .pc{
+        display: block;
+        width: 100%;
+    }
+
+    .slide .txt{
+        text-align: left;
+        width: auto;
+        left: 50%;
+        margin-left: 40px;
+        top: 38%;
+    }
+
+    .slide .bannerBtn{
+        text-align: center;
+        margin: unset;
+        margin-top: 20px;
+    }
+
+    /*  
+    텍스트들 가로정렬,
+    텍스트박스 왼쪽에서 50% + 40px 지점에 가져다 놓기
+
+    */    
+
+    .row1{
+        display: flex;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .row1>div{
+        width: 50%;
+    }
+
+    .row1 .mobile{
+        display: none;
+    }
+
+    .row1 .pc{
+        display: block;
+        width: 100%;
+    }
+
+
+    .row2{
+        display: flex;
+    }
+    
+    .row2>div{
+        width: 33.33%;
+        margin-right: 15px;
+    }
+
+
+    .row2>div:last-child{
+        margin-right: 0;
+    }
+
+    .row2>div{
+        flex-direction: column;
+    }
+    .row2 img{
+        width: 100% !important;
+    }
+    .row2 .box1 .txt{
+        width: 100%;
+        padding: 30px 0
+    }
+
+    .row2 .box2{
+        margin: 0;
+        margin-right: 15px;
+        background-image: url(../images/img_news_2.jpg);
+        background-size:cover;
+        background-position: center;
+    }
+
+    .row2 .box2 img{
+        display: none;
+    }
+
+    .row2 .box3 .txt{
+        width: 100%;
+        padding: 30px 0;
+        order:2;
+    }
+
+    .row2 .box3 img{
+        order:1;
+    }
+
+    .row3 .txt p{
+        display: block;
+        text-align: center;
+    }
+}/*756px 태블릿영역*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*1200px PC 영역*/
+
+@media all and (min-width:1200px){
+
+    header{
+        height: 147px;
+    }
+
+    header button{display: none;}
+
+    h1{
+        padding-top: 35px;
+    }
+
+    h1 img{
+        width: 256px;
+    }
+
+    
+    aside{
+        position: unset;
+        overflow-y: visible;
+        background-color: transparent;
+        margin-top: 20px;
+    }
+
+    aside .util{
+        margin: 0;
+        position: absolute;
+        top: 42px;
+        right: 0;
+    }
+
+    nav>ul{
+        display: flex;
+        justify-content: space-evenly;
+    }
+   nav>ul>li{
+       position: relative;
+   }
+   nav .a:after{content: none;}
+   nav .a:hover{background-color: transparent;}
+
+   .a{
+       position: relative;
+   }
+
+   .a:before{
+       content: '';
+       width: 0;
+       height: 4px;
+       position: absolute;
+       left:0;
+       bottom: 10px;
+       background-color: gold;
+   }
+
+   .a:hover:before{
+       width: 100%;
+       transition: all 1s;
+   }
+
+.util .srch form{
+    display: block;
+}
+
+.util .srch span{
+    display: none;
+}
+
+.util .srch{
+    position: relative;
+}
+
+.util .srch input{
+    background-color: transparent;
+    border:0;
+    border-bottom: 1px solid #8e9969;
+    padding-bottom: 3px;
+    color: #8e9996;
+}
+
+.util .srch button{
+    position: absolute;
+    top:0;
+    right:0;
+    display: block;
+}
+
+.sns{
+    display: none!;
+}
+   .sub{
+       display: none;
+       position: absolute;
+       top: 35px;
+       left:50%;
+   }
+
+   nav li:nth-child(1) .sub{
+     width: 160px;
+     margin-left: -80px;
+   }
+
+   nav li:nth-child(2) .sub{
+       width: 460px;
+       margin-left: -230px;
+   }
+
+   nav li:nth-child(3) .sub{
+       width: 290px;
+       margin-left: -145px;
+   }
+
+   nav li:nth-child(4) .sub{
+       width: 140px;
+       margin-left: -70px;
+   }
+
+
+
+   .sub a{
+       border:0;
+       background-color: transparent;
+
+   }
+
+   .sub li{
+       margin-right: 40px;
+       float: left;
+   }
+
+   .sub li:last-child{
+       margin-right: 0;
+   }
+
+.row3 .txt{
+    width: 418px;
+}
+
+.fMenu{
+    text-align: left;
+    margin-left: 15px;
+    margin-right: 150px;
+    padding-bottom: 18px;
+}
+
+.lang{
+    position: absolute;
+    top: 0;
+    right: 180px;
+    margin: 0;
+}
+
+footer{
+    padding-bottom: 80px;
+}
+
+footer .txt{
+    display: flex;
+}
+
+footer .txt .tel{
+    margin-right: 30px;
+}
+
+.copyright{
+    position: absolute;
+    right: 180px;
+    top: 40px;
+}
+
+.mark{
+    right:30px;
+    top:0;
+    margin-left:0;
+    left: unset;
+    bottom: unset;
+    width: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}/*1200px*/

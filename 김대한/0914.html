@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            layout 복습
+        </title>
+
+        <style>
+            .box1{
+                width: 960px;
+                height: 150px;
+                background-color:red;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .box2{
+                width: 960px;
+                height:380px;
+                background-color: navy;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .con1:after{
+                content:'';
+                clear: both;
+                display: block;
+            }
+
+            .con1{
+                margin-left: auto;
+                margin-right: auto;
+                background-color: pink;
+                width: 960px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                /* 될 수 있으면! 가로정렬된 내부의 요소들 보다는
+                묶음/덩어리/부모/컨테이너 에게 margin-top, bottom을
+                줘서 해결합시다~~~ */
+            }
+
+            .con1 .box3:last-child{
+                margin-right: 0;
+            }
+            
+            .box3{
+                width: 225px;
+                height: 225px;
+                background-color:darkviolet;
+                float:left;
+                margin-right: 20px;
+            }
+
+            .con2:after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+
+            .con2{
+                margin-left: auto;
+                margin-right: auto;
+                background-color:gold;
+                width: 960px;
+            }
+            .con2 .box4:last-child{
+                margin-right: 0;
+            }
+            .box4{
+                width: 300px;
+                height: 200px;
+                background-color: green;
+                float: left;
+                margin-right: 30px;
+            }
+
+            .box5{
+                width: 960px;
+                height: 80px;
+                background-color:skyblue;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="box1"></div>
+        <div class="box2"></div>
+
+        <div class="con1">
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+        </div><!--con1-->
+
+        <div class="con2">
+            <div class="box4"></div>
+            <div class="box4"></div>
+            <div class="box4"></div>
+        </div><!--con2-->
+
+        <div class="box5"></div>
+    </body>
+</html>

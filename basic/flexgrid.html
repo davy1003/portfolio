@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexgrid</title>
+<style>
+
+*{margin: 0;
+padding:0;}
+
+ul{list-style: none;}
+
+
+.wrap{display:flex;}
+
+header{width: 170px;
+        background-color: blueviolet;
+        color:#fff;}
+
+main{width: 100%;
+     }
+
+/* display:flex를 쓰기 위해서는
+1. 가로정렬할 대상들을 반드시 하나의 부모로 감싸줘야 한다.
+2.부모에게 display:flex를 주면, 자식들이 가로정렬됨
+
+부모: flex container
+자식: flex item
+
+flex item들은 기본적으로 부모의 높이 값을 꽉 채우려는
+속성을 갖고 있다(align-self:stretch) */
+
+h1{text-align:center;
+   padding: 30px 0;}
+
+
+
+.gnb li{border-bottom: 1px solid #444;
+        padding:15px 0;
+        text-indent: 10px;
+       font-size: 22px;}
+
+main{width:100%;
+background-color: cornflowerblue;}
+
+
+.mainBn{position: relative;}
+
+.mainBn .bnImg{height: 500px;
+               background-color: darkgrey;}
+
+.mainBn .pager{display: flex;
+               justify-content: center;
+               position: absolute;
+               left:0;
+               bottom: 20px;
+               width:100%;}
+
+.mainBn .pager a{display:block;
+                 width:20px;
+                 height:20px;
+                 background-color: darkmagenta;
+                 margin:0 10px;
+                border-radius: 50%;}
+
+.row1{display:flex;
+      justify-content: space-evenly;}
+
+
+
+
+.row2{width: 80%;
+margin: 0 auto;}
+
+h3{background-color: darkseagreen;
+color:#fff;
+padding:10px;}
+
+
+.row2 ul{background-color: darkturquoise;}
+
+.row2 ul li{padding:10px;
+            display:flex;
+            justify-content: space-between;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1>LOGO</h1>
+            <ul class="gnb">
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+                <li>list4</li>
+                <li>list5</li>
+                <li>list6</li>
+            </ul>
+        </header>
+        <main>
+            <div class="mainBn">
+                <div class="bnImg"></div>
+                <div class="pager">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+            </div>
+                <div class="row1">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+
+                <div class="row2">
+                    <h3>공지사항</h3>
+                    <ul>
+                        <li>
+                            <span class="tit">공지사항들어가느느 곳</span>
+                            <span class="no">03-12</span>
+                        </li>
+
+                        <li>
+                            <span class="tit">공지사항들어가느느 곳</span>
+                            <span class="no">03-12</span>
+                        </li>
+
+                        <li>
+                            <span class="tit">공지사항들어가느느 곳</span>
+                            <span class="no">03-12</span>
+                        </li>
+
+                        <li>
+                            <span class="tit">공지사항들어가느느 곳</span>
+                            <span class="no">03-12</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

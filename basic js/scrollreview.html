@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrollreview</title>
+    <style>
+
+*{
+    margin: 0;
+    padding:0;
+}
+
+ul{
+    list-style: none;
+}
+
+.count{
+    background-color: pink;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+section{
+    height: 100vh;
+}
+
+.s1{background-color: palegoldenrod;}
+.s2{background-color: palegreen;}
+.s3{background-color: paleturquoise;}
+.s4{background-color: palevioletred;}
+.s5{background-color: lavender;}
+
+.move{
+    display: flex;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+
+.move li{
+    margin: 0 10px;
+}
+
+.move li.on{
+    background-color: black;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+<div class="count">
+
+</div>
+
+<ul class="move">
+    <li class="on">s1</li>
+    <li>s2</li>
+    <li>s3</li>
+    <li>s4</li>
+    <li>s5</li>
+</ul>
+
+
+<div id="wrap">
+    <section class="s1"></section>
+    <section class="s2"></section>
+    <section class="s3"></section>
+    <section class="s4"></section>
+    <section class="s5"></section>
+</div>
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+
+// 1. 윈도우의 스크롤을 움직이고 있는 동안
+// 2. 스크롤탑의 위치값을 구해서
+// 3. .count안에 출력하기
+
+let secHeight = $('.s1').height();
+
+
+$(window).on('scroll',function(){
+    let scr = $(window).scrollTop();
+    $('.count').text(scr);
+    
+// 스크롤의 위치가, 0부터 section 한계값 안일때 li 가 on 클래스를 가짐
+// section 1개~2개 값 사이일땐 두번째 li가,
+// section 2개~3개 값 사이일땐 세번째 li가,
+// section 3개~4개 값 사이일땐 네번째 li가,
+// section 4개 이상의 값 사이일땐 다섯번째 li가,
+
+function liClass(e){
+    $('li').eq(e).addClass('on').siblings().removeClass('on');  
+}
+
+if(scr >=0  && scr < secHeight*1){
+    liClass(0)
+}
+
+if(scr >= secHeight*1 && scr < secHeight*2){
+    liClass(1)
+}
+
+if(scr >= secHeight*2 && scr < secHeight*3){
+    liClass(2)
+}
+
+if(scr >= secHeight*3 && scr < secHeight*4){
+    liClass(3)
+}
+
+if(scr >= secHeight*4){
+    liClass(4)
+}
+
+
+});
+
+// 1. .move안의 li를 클릭했을 때
+// 2. 해당 섹션으로 스크롤이 애니메이트
+
+$('.move li').on('click',function(){
+    let i = $(this).index();
+    $('html, body').stop().animate({'scrollTop' : secHeight*i});
+});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

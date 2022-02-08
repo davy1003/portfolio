@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+*{margin: 0;
+ padding: 0;}
+
+a{color: inherit;
+ text-decoration: none;}
+
+ul{list-style: none;}
+
+img{vertical-align: top;}
+
+
+.vBox{position: fixed;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      background-color: #333;}
+
+.vBox video{width: 100%;
+            min-width: 1600px;}
+
+header{width: 700px;
+    position:absolute;
+    height:100%;
+    transform: skewX(-40deg);
+    top:0;
+    left:-420px;
+    background-image: linear-gradient(-45deg, #e6fc55, #b9fb05, #97fb05);}
+
+h1{transform: skewX(40deg);
+   position: absolute;
+   left: 200PX;
+   top:40px;}
+
+.gnb span{transform: skew(40deg);
+     display:block;}
+
+.gnb{font-family: 'play', sans-serif;
+     position: absolute;
+    right: 0;
+    top: 150px;}
+
+.gnb>li{position: relative;}
+
+.sub{position: absolute;
+     left: 0px;
+     top:0;
+     transition: all 0.4s;
+    opacity: 0;}
+
+
+.gnb>li:hover .sub{left: 205px;
+                opacity: 1;}
+
+.gnb .on a{background-color: #222;
+           color: #fff;}
+
+.gnb .on .sub{left: 205px;
+              opacity: 1;}
+
+.gnb>li>a{display: block;
+          width: 220px;
+          line-height: 50px;
+          color: #222;
+          font-size: 18px;
+          text-align: right;
+          padding-right: 40px;
+          box-sizing: border-box;}
+
+.gnb>li:hover>a{background-color: #222;
+                color: #fff;}
+
+.sub a{display: block;
+       width: 150px;
+       line-height: 40px;
+       background-color: #222;
+       color: #fff;
+       font-weight: bold;
+       font-size: 16px;
+       font-family: arial;
+       text-align: center;
+       border-bottom: 1px solid #b9fb05;
+       opacity: 0.8;}
+
+.sns{position: absolute;
+    top: 60px;
+    right: 50px;
+    color: #b9fb05;}
+
+.sns li{float:left;
+        margin-left: 30px;
+        font-size: 25px;
+        opacity: 0.5;
+        transition: all 0.5s;}
+
+.sns li:hover{opacity:1;
+              transform: scale(1.4);}
+
+article{position:absolute;
+        top: 200px;
+        right: 70px;
+    line-height: 1;}
+        
+article strong{font-size: 160px;
+        color: #b9fb05;
+       font-family: 'monoton';
+      letter-spacing: -1px;
+      font-weight: normal;
+      font-style: normal;}
+
+article p{font-size: 50px;
+          color: #fff;
+           font-style: italic;}
+
+article h2{font-size: 34px;
+    color: #bbb;
+    font-family: 'play';
+    letter-spacing: -2px;}
+
+article h2 span{font-size: 34px;
+    color: #b9fb05;
+    margin-left: 20px;
+    font-family: arial;}
+
+section{width: 800px;
+    position:absolute;
+    right:0;
+    bottom: 0;
+    height: 100%;
+    background-color: #111;
+    transform: skewX(-40deg);
+    opacity: 0.5;
+    transition: all 0.5s;
+    right:-800px;}
+
+section:hover{right:-400px;
+              opacity: 0.8;}
+
+section .con{width: 400px;
+             position: absolute;
+             height: 100%;
+             left: 150px;
+             bottom: 0;
+             background-color: #000;
+             transition: all 1s;}
+
+section:hover .con{left: 50px;}
+
+.conWrap{position: absolute;
+         bottom: 50px;
+         left: 50px;
+        color: #b9fb05;}
+
+.conWrap .item{margin-bottom: 10px;
+               opacity: 0.3;
+               transform: translateX(200px);
+               transition: all 0.4s;}
+
+.conWrap .item:nth-child(2){transition:all 0.8s;}
+.conWrap .item:nth-child(3){transition:all 1.2s;}
+
+section:hover .item{opacity: 1;
+                    transform:translateX(0);}
+
+section:hover .item{transition: translataX(0);}
+
+.arr{position:absolute;
+     bottom: 40px;
+     left: 100px;
+     transform: skewX(40deg);
+     width: 150px;}
+
+.arr i{font-size: 60px;
+       color: #b9fb05;
+       position:absolute;
+       right: 0;
+       bottom: 0;
+       opacity: 1;  
+    
+    animation: arr 1.5s infinite linear;}
+
+@keyframes arr{0%{opacity: 1; right: -100px;}
+               100%{opacity: 0; transform: scale(1.5);}
+}
+
+.arr i:nth-child(2){animation-delay: 0.4s;}
+
+.arr i:nth-child(3){animation-delay: 0.8s;}
+
+section:hover .arr{display: none;}
+
+body{overflow-x: hidden;}
+
+
+
+
+

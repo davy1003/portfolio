@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>widthHeight</title>
+    <style>
+div{
+    margin: 40px auto;
+}
+
+.box1{
+    width: 220px;
+    height: 340px;
+    background-color: blueviolet;
+}
+
+.box2{
+    width: 324px;
+    height: 150px;
+    background-color: chartreuse;
+}
+
+.box3{
+    width: 180px;
+    height: 282px;
+    background-color: cyan;
+}
+
+.box4{
+    width: 462px;
+    height: 296px;
+    background-color: darkmagenta;
+}
+
+.box5{
+    width: 650px;
+    height: 490px;
+    background-color: darkorange;
+}
+
+.box6{
+    width: 272px;
+    height: 562px;
+    background-color: darkred;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<div class="box4"></div>
+<div class="box5"></div>
+<div class="box6"></div>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+
+let width1 = $('.box1').width(); //선택자의 너비값을 구함
+let height1 = $('.box1').height(); //선택자의 높이 값을 구함
+
+console.log(width1, height1);
+
+// $('.box1').width(500); //내부에 숫자를 넣어줄 경우, 너비값을 바꿔줌
+// $('.box1').height(270); //내부에 숫자를 넣어줄 경우, 높이값을 바꿔줌
+
+
+// div를 클릭했을때, 너비값과 높이값을 서로 바꿔 줌
+// 원래의 너비값 -> 높이값
+// 원래의 높이값 -> 너비값
+
+// div를 클릭했을 때 
+// 클릭한 div의 너비값을 구함
+// 그래서 그걸 클릭한 divd의 높이값으로 줌
+// 클릭한 div의 높이값을 구함
+// 그래서 그걸 클릭한 div의 너비값으로 줌
+
+$('div').on('click',function(){
+
+    let wid = $(this).width();
+    let hig = $(this).height();
+
+    $(this).height(wid);
+    $(this).width(hig);
+});
+
+// 각각의 dive들에게 너비와 높이를 구해서 div 안에 적어주세요
+
+$('div').each(function(){
+
+    let boxWidth = $(this).width();
+    let boxHeight = $(this).height();
+
+    let result = "너비 :" + boxWidth + "px, 높이 :" + boxHeight + "px";
+    $(this).text(result);
+
+
+
+})
+// let box1Wid = $('.box1').width();
+// let box1Hig = $('.box1').height();
+// $('.box1').text('너비' + box1Wid + ', 높이:' + box1Hig);
+
+// let box2Wid = $('.box2').width();
+// let box2Hig = $('.box2').height();
+// $('.box2').text('너비' + box2Wid + ', 높이:' + box2Hig);
+
+// let box3Wid = $('.box3').width();
+// let box3Hig = $('.box3').height();
+// $('.box3').text('너비' + box3Wid + ', 높이:' + box3Hig);
+
+// let box4Wid = $('.box4').width();
+// let box4Hig = $('.box4').height();
+// $('.box4').text('너비' + box4Wid + ', 높이:' + box4Hig);
+
+// let box5Wid = $('.box5').width();
+// let box5Hig = $('.box5').height();
+// $('.box5').text('너비' + box5Wid + ', 높이:' + box5Hig);
+
+// let box6Wid = $('.box6').width();
+// let box6Hig = $('.box6').height();
+// $('.box6').text('너비' + box6Wid + ', 높이:' + box6Hig);
+
+
+</script>
+
+
+</body>
+</html>

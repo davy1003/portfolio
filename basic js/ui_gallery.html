@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui_gallery</title>
+    <style>
+*{
+    margin:0;
+    padding:0;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.s1{
+    margin-top: 50px;
+    background-color: #eee;
+    padding: 40px 0;
+}
+
+h3{
+    text-align: center;
+    color:#333;
+    font-size:32px;
+    margin-bottom: 22px;
+}
+
+.wrap{
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+article, figure{
+    width: 30%;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: all 1s;
+}
+
+article:hover, figure:hover{
+    transform: translate(-5px, -5px);
+    box-shadow: 7px 7px 15px (0,0,0,0,1);
+}
+
+.image{
+    height: 200px;
+    overflow: hidden;
+}
+
+.image img{
+    width: 100%;
+    transition: all 1s;
+    /* filter: blur(5px); */
+    filter:grayscale(100%);
+}
+
+article:hover .image img, figure:hover .image img{
+    /* filter: blur(0); */
+    filter:grayscale(0);
+}
+
+.txt{
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.imgView, .vidView{
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height: 100%;
+    display:none;
+    z-index: 9999;
+}
+
+.imgView i, .vidView em{
+    font-style: italic;
+    color: #fff;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.imgShow, .vidShow{
+    width: 700px;
+    background-color: lightpink;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+}
+
+.imgShow img, .vidShow video{
+    width: 100%;
+}
+
+.txtBox{
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    text-align: center;
+    color: #fff;
+}
+
+.closeWrap, .vidClose{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.source{
+    display: none;
+    font-size: 0;
+}
+
+.s3{
+    margin: 100px auto;
+}
+
+.s3 .box{
+    width: 30%;
+}
+
+.s3 video{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+<section class="s1">
+    <h3>IMAGE GALLERY</h3>
+    <div class="wrap">
+        <article><a href="#">
+            <div class="image"><img src="images/image1.jpg"></div>
+            <div class="txt">
+                <h4>첫번째 이미지</h4>
+                <p>첫번째 이미지 고양이</p>
+            </div>
+        </a></article>
+
+        <article><a href="#">
+            <div class="image"><img src="images/image2.jpg"></div>
+            <div class="txt">
+                <h4>두번째 이미지</h4>
+                <p>두번째 이미지 노부부</p>
+            </div>
+        </a></article>
+
+        <article><a href="#">
+            <div class="image"><img src="images/image3.jpg"></div>
+            <div class="txt">
+                <h4>이미지 제목</h4>
+                <p>세번째 이미지 해변</p>
+            </div>
+        </a></article>
+    </div>
+
+    <div class="imgView">
+        <div class="closeWrap"></div>
+        <i>close</i>
+        <div class="imgShow">
+            
+        </div>
+
+        <div class="txtBox">
+            <h4>이미지 제목설명</h4>
+            <p>이미지 설명</p>
+        </div>
+    </div>
+
+
+</section>
+
+<section class="s2">
+    <h3>VIDEO GALLERY</h3>
+    <div class="wrap">
+        <figure>
+            <a href="#">
+                <span class="source">video1.mp4</span>
+                <div class="image">
+                    <img src="images/thumb1.jpg">
+                </div>  
+                <div class="txt">
+                    <h4>첫번째 동영상</h4>
+                    <p>첫번째 동영상 설명</p>
+                </div>
+            </a>
+        </figure> <!-- 첫번째 피큐어 -->
+
+        <figure>
+            <a href="#">
+                <span class="source">video2.mp4</span>
+                <div class="image">
+                    <img src="images/thumb2.jpg">
+                </div>  
+                <div class="txt">
+                    <h4>두번째 동영상</h4>
+                    <p>두번째 동영상 설명</p>
+                </div>
+            </a>
+        </figure><!-- 두번째 피규어 -->
+
+        <figure>
+            <a href="#">
+                <span class="source">video3.mp4</span>
+                <div class="image">
+                    <img src="images/thumb3.jpg">
+                </div>  
+                <div class="txt">
+                    <h4>세번째 동영상</h4>
+                    <p>세번째 동영상 설명</p>
+                </div>
+            </a>
+        </figure><!-- 세번째 피규어 -->
+
+    </div>
+
+    <div class="vidView">
+        <div class="vidClose"></div>
+        <div class="vidShow">
+
+        </div>
+
+        <em>close</em>
+        <!-- em: 인라인요소, 이탤릭이 적용 되어있음 강조의 의미
+            인라인요소: a, img, i...
+            고대의 태그: b,i...글자를 쓰다가 굵게 하고 싶으면 쓰던 태그 b
+                               글자를 기울이게 하는 용도로 쓰던 태그  i
+
+        strong, em 태그 -->
+
+
+            
+    </div>
+</section>
+
+<section class="s3">
+    <h3>VIDEO GALLERY2</h3>
+<div class="wrap">
+    <div class="box">
+        <video muted preload>
+            <source src ="images/video1.mp4">
+        </video>
+    </div>
+
+    <div class="box">
+        <video muted preload>
+            <source src ="images/video2.mp4">
+        </video>
+    </div>
+
+    <div class="box">
+        <video muted preload>
+            <source src ="images/video3.mp4">
+        </video>
+    </div>
+</div>
+</section>
+
+<section class="s4">
+    <h3> YOU TUBE VIDEO GALLERY</h3>
+    <div class="wrap">
+        <figure>
+            <a href="#">
+                <span class="source">EjsczUK1wjg</span>
+                <div class="image">
+                    <img src="images/thumb1.jpg">
+                </div>  
+                <div class="txt">
+                    <h4>첫번째 동영상</h4>
+                    <p>첫번째 동영상 설명</p>
+                </div>
+            </a>
+        </figure> <!-- 첫번째 피큐어 -->
+
+        <figure>
+            <a href="#">
+                <span class="source">lNO1m7X_xm4</span>
+                <div class="image">
+                    <img src="images/thumb2.jpg">
+                </div>  
+                <div class="txt">
+                    <h4>두번째 동영상</h4>
+                    <p>두번째 동영상 설명</p>
+                </div>
+            </a>
+        </figure><!-- 두번째 피규어 -->
+
+        <figure>
+            <a href="#">
+                <span class="source">g9uAlH8uB44</span>
+                <div class="image">
+                    <img src="images/thumb3.jpg">
+                </div>  
+                <div class="txt">
+                    <h4>세번째 동영상</h4>
+                    <p>세번째 동영상 설명</p>
+                </div>
+            </a>
+        </figure><!-- 세번째 피규어 -->
+
+    </div>
+
+    <div class="vidView">
+        <div class="vidClose"></div>
+        <div class="vidShow">
+
+        </div>
+
+        <em>close</em>
+        <!-- em: 인라인요소, 이탤릭이 적용 되어있음 강조의 의미
+            인라인요소: a, img, i...
+            고대의 태그: b,i...글자를 쓰다가 굵게 하고 싶으면 쓰던 태그 b
+                               글자를 기울이게 하는 용도로 쓰던 태그  i
+
+        strong, em 태그 -->
+
+
+            
+    </div>
+</section>
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+
+// 1. article를 클릭했을 때
+// 2. imgView가 페이드로 나타남
+// 3. 클릭한 article 내부에 있는 이미지가
+//    imgView 안의 imgShow에 들어감
+
+$('article').click(function(e){
+    e.preventDefault(); // a태그로 인해 새로고침 되는 것을 막음
+
+    $('.imgView').fadeIn();
+
+    // 1. 변수를 하나 만들어서,
+    // 2. 클릭한 article의 .image 내부의 html을 가짐
+    // 3. html이 저장된 변수를
+    // 4. .imgShow에게 html로 준다
+
+
+let img = $(this).find('.image').html();
+$('.imgShow').html(img);
+
+// ////////////////////////////////////////////////////////////////////////////
+let h4 = $(this).find('h4').text();
+let p = $(this).find('p').text();
+   
+$('.imgView').find('h4').text(h4);
+$('.imgView').find('p').text(p);
+});
+
+
+// close 클릭하면 imgView fadeOut() 
+
+$('.imgView i, .closeWrap').click(function(){
+    $('.imgView').fadeOut();
+});
+
+
+// 1. 클릭한 article 내부의 .txt 내부의 h4 텍스트가
+// 2. .imgShow 안의 txtBox 안의 h4로 들어가기
+// 3. 클릭한 article 내부의 .txt 내부의 p의 텍스트가
+// 4. .imgShow 안의 .txtBox 안의 p로 들어가기
+
+
+// figure 를 누르면 .vidView가 fadeIn 한다
+
+
+$('.s2 figure').click(function(e){
+    e.preventDefault();
+
+    $('.s2 .vidView').fadeIn();
+
+let sources = $(this).find('.source').text();
+let src = "images/" + sources;
+
+    $('.s2 .vidShow').append('<video></video>');
+    $('.s2 .vidShow').children('video').attr({
+        'src':src,
+        'autoplay':'true',
+        'loop':'true'
+    });
+});
+
+$('.s2 em, .vidClose').click(function(){
+    $('.s2 .vidView').find('video').remove();
+    $('.s2 .vidView').fadeOut();
+});
+
+// 1. figure를 클릭하면
+// 2. vidView가 뜬다
+// 3. vidView 내부에 video 태그가 생성된다
+// 4. 
+
+
+$('.box').on('mouseover',function(){
+
+    let vid = $(this).find('video').get(0);
+                                    // 제이퀴리에서 직접적으로 비디어 소스를 잠는게 힘들다
+                                    // get은 제이쿼리로 포장된 선택지에서
+                                    // 내부의 노드를 선택하는것
+    vid.play();
+
+}).on('mouseout',function(){
+
+    let vid = $(this).find('video').get(0);
+    vid.pause();
+    vid.currentTime = 0;
+
+})
+
+
+
+
+$('.s4 figure').on('click',function(e){
+    e.preventDefault();
+    let key = $(this).find('.source').text();
+    let txt = '<iframe width="1280" height="715" src="https://www.youtube.com/embed/'+ key +'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+
+$('.s4 .vidView').fadeIn();
+$('.s4 .vidShow').html(txt);
+
+$('.s4 .vidWrap, .s4 .vidClose').click(function(){
+    $('.s4 .vidView').fadeOut();
+})
+
+
+});
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

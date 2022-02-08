@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plugin_slickslide</title>
+    <link rel="stylesheet" href="js/slick.css">
+    <style>
+*{
+    margin: 0%;
+    padding:0;;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+section{
+    height: 100vh;
+}
+
+h2{
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 100px;
+}
+
+.slide1{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide1 .box{
+    height: 800px;
+}
+
+.slide1 .box1{background-color: red;}
+.slide1 .box2{background-color: orangered;}
+.slide1 .box3{background-color: orange;}
+.slide1 .box4{background-color: gold;}
+.slide1 .box5{background-color: yellow;}
+
+.mainBn{
+    position: relative;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.next1, .prev1{
+    position: absolute;
+    top: 50%;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.next1{
+    right: 10px;
+}
+
+.prev1{
+    left: 10px;
+}
+
+.next1:hover, .prev1:hover{
+    background-color: #333;
+    color:#eee;
+}
+
+.banner{
+    position: relative;
+}
+
+.slide2{
+    width: 800px;
+    margin-left: 50px;
+    border: 10px solid #000;
+}
+
+.slide2 .box{
+    height: 600px;
+}
+
+.slide2 .box1{
+    background-color: turquoise;
+}
+
+.slide2 .box2{
+    background-color: deeppink;
+}
+
+.slide2 .box3{
+    background-color: dodgerblue;
+}
+
+.slide2 .box4{
+    background-color: limegreen;
+}
+
+.slide2 .box5{
+    background-color: gold;
+}
+
+.subslide{
+    position: absolute;
+    top: 450px;
+    left: 600px;
+    width: 300px;
+    border: 10px solid #000;
+    background-color: #fff;
+}
+
+.subslide .box{
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-family: Arial;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.slick-dots{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left:0;
+    bottom: 20px;
+    width: 100%;
+}
+
+.slick-dots button{
+    width: 20px;
+    height: 20px;
+    border:0;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+.slick-dots li{
+    margin:0 10px;
+}
+
+.slick-dots li.slick-active button{
+    background-color: transparent;
+    border: 1px solid #000;
+}
+
+
+
+.slide3 .item .box{
+    margin: 0 20px;
+    width: 300px;
+    height: 400px;
+    background-color: darkviolet;
+    color: #fff;
+    font-size: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+<div id="wrap">
+    <section class="s1">
+        <h2>기본 슬라이드!!!</h2>
+
+        <div class="mainBn">
+        <div class="slide1">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+            <div class="box box5"></div>
+        </div>
+
+        <a href="#" class="next1">▶</a>
+        <a href="#" class="prev1">◀</a>
+    </div>
+    </section>
+
+<section class="s2">
+    <h2>이중슬라이드</h2>
+    <div class="banner">
+        <div class="slide2">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+            <div class="box box5"></div>
+        </div>
+
+        <div class="subslide">
+            <div class="box box1">turquoise</div>
+            <div class="box box2">deeppink</div>
+            <div class="box box3">dodgerblue</div>
+            <div class="box box4">limegreen</div>
+            <div class="box box5">gold</div> 
+        </div>
+    </div>
+</section>
+
+<section class="s3">
+    <h2>캐러셀</h2>
+    <div class="slide3">
+        <div class="item"><div class="box">1</div></div>
+        <div class="item"><div class="box">2</div></div>
+        <div class="item"><div class="box">3</div></div>
+        <div class="item"><div class="box">4</div></div>
+        <div class="item"><div class="box">5</div></div>
+        <div class="item"><div class="box">6</div></div>
+        <div class="item"><div class="box">7</div></div>
+        <div class="item"><div class="box">8</div></div>
+    </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/slick.js"></script>
+<script>
+
+$('a').click(function(e){
+    e.preventDefault();
+})
+
+
+$('.slide1').slick({
+    'nextArrow' : '.next1',
+    'prevArrow' : '.prev1',
+    'autoplay' : true,
+    'autoplaySpeed' : 1000,
+    'pauseOnHover' : true
+});
+
+
+$('.slide2').slick({
+    'arrows' : false,  //prev / next 버튼 쓰지 않음
+    'fade' : true,  //fade mode 켜기
+    'dots' : true,  //pager 버튼 생성
+    'asNavFor' : '.subslide'
+});
+
+
+$('.subslide').slick({
+    'arrows' : false,
+    'asNavFor' : '.slide2'
+});
+
+
+$('.slide3').slick({
+    'slidesToShow' : 5,
+    'slidesToScroll' : 1,  //1개씩 이동  입력한 숫자만큼 이동한다
+    'centerMode' : true
+});
+
+
+
+
+</script>
+
+
+</body>
+</html>

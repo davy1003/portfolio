@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout5</title>
+        <style>
+            .box1{
+                height: 90px;
+                border-bottom: 2px solid blue;
+
+            }
+
+            h1{
+                text-align: center;
+                font-size: 32px;
+            }
+
+            .box2{
+                background-color: lightgray;
+                height: 420px;
+            }
+
+            .con1{
+                margin-top: 35px;
+                width: 940px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .con1 .box3{
+                width: 205px;
+                height: 190px;
+                margin-right: 35px;
+                background-color: black;
+                float: left;
+            }
+
+            .con1 .box3:nth-child(2){
+                width: 460px;
+            }
+
+            .con1 .box3:last-child{
+                margin-right: 0;
+            }
+
+            .con1:after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+
+            .con2{
+                width: 940px;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 35px;
+            }
+
+            .con2 .box4{
+                width: 205px;
+                height: 200px;
+                background-color: crimson;
+                float: left;
+            }
+
+            .con2 .box4:nth-child(2){
+                width: 530px;
+                background-color:gray
+            }
+
+            .con2:after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+
+            .box5{
+                height: 80px;
+                border-top: 2px solid blue;
+                width: 940px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 80px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- 
+            .con .box{} > con안에 들어있는 box선택
+
+            .con.box{} > .box라는 클래스를 가지고있는
+                        .con을 선택
+         -->
+        
+        <div class="box1">
+            <h1>로고</h1>
+        </div><!--box1-->
+
+        <div class="box2"></div>
+
+        <div class="con1">
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+        </div><!--con1-->
+
+        <div class="con2">
+            <div class="box4"></div>
+            <div class="box4"></div>
+            <div class="box4"></div>
+        </div><!--con2-->
+
+        <div class="box5"></div>
+    </body>
+</html>

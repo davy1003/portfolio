@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui_theme</title>
+    <style>
+*{
+    margin:0;
+    padding:0;
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    border-bottom: 1px solid #ccc;
+    height: 108px;
+    color:#333;
+}
+
+.hWrap{
+    width:1200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    position: relative;
+}
+
+.btnBox{
+    position: absolute;
+    right:0;
+    top: 10px;
+}
+
+.btnBox button{
+    background-color: transparent;
+    border:1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    width: 60px;
+    line-height: 22px;
+    color: #666;
+    text-align:center;
+    font-size: 14px;
+}
+
+.btnBox .dark{
+    border-radius: 0 5px 5px 0;
+    border-left: 0;
+}
+
+.btnBox button.on{
+    background-color: turquoise;
+    color: #fff;
+}
+
+h1{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.gnb{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.gnb li{
+    margin: 0 20px;
+}
+
+body.dark{
+    background-color: #333;
+}
+
+body.dark header{
+    color:#fff;
+    border-bottom-color: #666;
+}
+
+body.dark .btnBox button{
+    color: #eee;
+    border-color: #eee;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+
+
+
+<header>
+    <div class="hWrap">
+    <h1>LOGO</h1>
+    <ul class="gnb">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+    </ul>
+
+    <div class="btnBox">
+        <button class="light on">Light</button>
+        <button class="dark">Dark</button>
+    </div>
+</div>
+</header>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script >
+    // btnBox 내부의 버튼들을 클릭 했을때,
+    // 1. 해당 버튼이 on 클래스를 가짐
+    // 2. light 버튼 누르면 라이트 테마
+    // dark버튼 누르면 dark 테마가 되게 변경(body가 dark 클래스를 가짐)
+
+
+
+
+// $('.btnBox').click(function(){
+//     $('.dark').toggleClass('on');
+// });
+
+// $('.btnBox').click(function(){
+//     $('.light').toggleClass('on');
+// });
+
+
+$('.btnBox button').on('click',function(){
+    $(this).addClass('on').siblings().removeClass('on');
+    
+    if($(this).hasClass('dark')){
+        $('body').addClass('dark')
+    }else{
+        $('body').removeClass('dark');
+    }
+});
+
+$('.dark').on('click',function(){
+     $('body').addClass('dark');
+ });
+
+ $('.light').on('click',function(){
+     $('body').removeClass('dark');
+ });
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

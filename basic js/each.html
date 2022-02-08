@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>each</title>
+    <style>
+*{
+margin:0;
+padding:0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: transparent;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    font-family: Arial;
+    font-weight: 900;
+}
+
+ul{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    display: flex;
+}
+
+li{
+    margin:0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<ul>
+    <li><a href="#">DEEPPINK</a></li>
+    <li><a href="#">DARKVIOLET</a></li>
+    <li><a href="#">GOLD</a></li>
+    <li><a href="#">DODGERBLUE</a></li>
+    <li><a href="#">LIMEGREEN</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+    <div class="wrap">
+        <section>DEEPPINK</section>
+        <section>DARKVIOLET</section>
+        <section>GOLD</section>
+        <section>DODGERBLUE</section>
+        <section>LIMEGREEN</section>
+    </div>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+
+<script>
+
+
+// 모든 섹션에게 해당 섹션이 가지고 있는 텍스트를
+// 백그라운드 색으로 적용시키세요
+$('section').each(function(){
+    let bg = $(this).text();
+$(this).css({'backgroundColor' : bg});  
+});
+
+let seHeight = $('section').height();
+
+$('li').on('click',function(){
+
+    let i = $(this).index()
+    $('html, body').stop().animate({scrollTop : i*seHeight});
+        
+});
+
+// ul내부의 li를 누르면, 해당 섹션까지 스크롤이 애니메이트
+
+// 일단 섹션 한개의 높이를 1000이라고 칩시다
+// 첫번째 li를 누르면 맨위로 간다 -> 0 -> seHeight*0
+// 두번째 li를 누른다 -> 두번째 섹션의 시작지점 -> 1000 -> seHeight 한개 분량 -> seHeight*1
+// 세번째 li를 누른다 -> 세번째 섹션의 시작지점 -> 2000 -> seHeight 두개 분량 -> seHeight*2
+// 네번째 li를 누른다 -> 네번째 섹션의 시작지점 -> 3000 -> seHeight 세개 분량 -> seHeight*3
+// 다섯번째 li를 누른다 -> 다섯번째 섹션의 시작지점 -> 4000 -> seHeight 네개 분량 -> seHeight*4
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title> header3 </title>
+    <style>
+    *{margin: 0;
+      padding: 0;}
+
+    ul{list-style: none;}
+
+    
+
+
+    .header{width: 800px; 
+            height: 80px;
+            background-color: #dddddd;
+            position:relative;
+            margin-left: auto;
+            margin-right: auto;}
+
+    h1{font-size: 40px;}
+
+
+    .list{position: absolute;}
+    
+    .list:after{content: '';
+                clear: both;
+                display: block}
+
+    .list li{float: left;
+    margin-right: 40px;}
+
+    .util{font-size: 12px;
+    position:absolute;
+    top: 10px;
+    right: 0;}
+
+    .util:after{content:'';
+                 clear: both;
+                 display: block;}
+
+    .util li{float:left;
+             margin-left: 20px;}
+
+    .util li a{color: #999999;
+           }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><a href="#"> Logo </a></h1>
+        <ul class="list">
+            <li><a href="#"> list1 </a></li>
+            <li><a href="#"> list2 </a></li>
+            <li><a href="#"> list3 </a></li>
+            <li><a href="#"> list4 </a></li>
+            <li><a href="#"> list5 </a></li>
+            <li><a href="#"> list6 </a></li>
+        </ul>
+
+        <u1 class="util">
+          <li><a href="#"> util1 </a></li>
+          <li><a href="#"> util2 </a></li>
+          <li><a href="#"> util3 </a></li>
+          <li><a href="#"> util4 </a></li>
+        </ul>
+
+    
+    </div>
+</body>
+</html>

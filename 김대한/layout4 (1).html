@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        <title>layout4</title>
+        <style>
+
+            .box1{
+                width: 940px;
+                height: 185px;
+                background-color: blue;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .box2{
+                height: 480px;
+                background-color:darkviolet;
+            }
+
+            .con1{
+                margin-top: 20px;
+                width: 940px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .con1 .box3{
+                width: 300px;
+                height: 200px;
+                background-color:deeppink;
+                float: left;
+                margin-right: 20px;
+            }
+
+            .con1 .box3:last-child{
+                margin-right: 0;
+            }
+
+            .con1:after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+
+            .con2{
+                width: 940px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+            }
+
+            .con2 .box4:last-child{
+                margin-right: 0;
+            }
+
+            .box4{
+                width: 300px;
+                height: 200px;
+                background-color:skyblue;
+                float: left;
+                margin-right: 20px;
+            }
+
+            .con2:after{
+                content:'';
+                clear: both;
+                display: block;
+            }
+
+
+            .box5{
+                height: 185px;
+                background-color:navy;
+                margin-top: 20px;
+            }
+            
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="box1"></div>
+        <div class="box2"></div>
+
+        <div class="con1">
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+        </div><!--con1-->
+
+        <div class="con2">
+            <div class="box4"></div>
+            <div class="box4"></div>
+            <div class="box4"></div>
+        </div><!--con2-->
+
+        <div class="box5"></div>
+
+    </body>
+</html>

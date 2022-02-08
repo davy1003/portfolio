@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resposive-header2-2</title>
+<style>
+*{margin:0;
+  padding:0;}
+
+ul{list-style: none;}
+
+header{height: 50px;
+       background-color: #444;}
+
+h1{color: #ccc;
+   font-size: 26px;
+   text-align: center;}
+
+button{background-color:rgb(255, 60, 0);
+       border: 0;}
+
+.menu{width: 50px;
+      height: 50px;
+      background-color:transparent;
+      position:absolute;
+      top:0;
+      left:0;}
+
+.menu span{width: 22px;
+           height: 3px;
+           margin-bottom: 4px;
+           background-color:turquoise;
+           display:block;
+           margin-left: auto;
+           margin-right: auto;}
+
+.menu span:last-child{margin-bottom: 0;}
+
+.my{position:absolute;
+    top:0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+    background-color: transparent;}
+
+nav{position: fixed;
+    top:0;
+    left:-100%;
+    width: 100%;
+    height: 100%;
+    background-color:hotpink;
+    color: #eee;
+    z-index: 999;}
+
+.close{font-size: 30px;
+       width: 50px;
+       height: 50px;
+       text-align:center;
+       position:absolute;
+       left:0;
+       top:0;
+       color:#fff;}
+
+.srch{width: 50px;}
+
+
+
+
+
+
+</style>
+
+
+
+</head>
+<body>
+    <header>
+        <h1>LOGO</h1>
+
+        <button class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <button class="my">
+            my
+        </button>
+
+        <nav>
+            <button class="close">
+                X
+            </button>
+
+            <button class="srch">
+                <img src="images/srch.png">
+            </button>
+
+            <div class="sbox">
+                <form action="search.php">
+                    <input time="srch" name="srch" class="srchinput">
+                    <button>
+                        <img src="images/srch.png">
+                    </button>
+                </form>
+            </div>
+
+            <ul class="util">
+                <li>Log In</li>
+                <li>Join</li>
+                <li>Cs Center</li>
+            </ul>
+
+            <ul class="gnb">
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+                <li>list4</li>
+                <li>list5</li>
+            </ul>
+        </nav>
+    </header>
+
+    
+</body>
+</html>

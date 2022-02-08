@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Orbitron',Arial;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#wrap{
+    width: 100%;
+    height: 100vh;
+    overflow:hidden;
+    background-image: url(../images/bg_morning.jpg);
+    background-size: cover;
+    min-width: 1400px;
+    position: relative;
+}
+
+.cl1{
+    position: absolute;
+    top:0;
+    left:-1146px;
+    animation: cl1 110s infinite linear;
+}
+
+@keyframes cl1 {
+    0%{left:-1146px}
+    100%{left: 1950px}
+}
+
+.cl2{
+    position: absolute;
+    left:0;
+    top: 20px;
+    animation: cl2 100s infinite linear;
+}
+
+@keyframes cl2{
+    0%{left:0}
+    50%{left:1950px}
+    50.001%{left:-1840px}
+    100%{left:0}
+}
+
+.logo{
+    text-indent: -9999px;
+    width: 90px;
+    height: 80px;
+    background-image: url(../images/logo_b.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 30px;
+    left: 60px;
+}
+
+.gnb{
+    display: flex;
+    position: absolute;
+    top: 50px;
+    right: 200px;
+}
+
+.gnb li{
+    color: #555;
+    font-weight: bold;
+    font-size:14px;
+    margin-left: 30px;
+}
+
+.sns{
+    display: flex;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.sns li{
+    margin-left: 20px;
+    color: #555;
+    font-size: 18px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    bottom: 80px;
+    z-index: 999;
+}
+
+nav a{
+    width: 20%;
+    background-color: rgba(0,0,0,0.6);
+    color: #eee;
+    line-height: 45px;
+    text-indent: 15px;
+}
+
+nav a:hover{
+    background-color: rgba(255,255,255,0.7);
+    color: #333;
+}
+
+nav a.on{
+    background-color: rgba(255,255,255,0.7);
+    color: #333;
+}
+
+article{
+    position: absolute;
+    top: 350px;
+    left: 150px;
+}
+
+h2{
+    color: #666;
+    font-size: 50px;
+}
+
+h2 span{
+    color: #111;
+}
+
+article p{
+    color:#333;
+    font-size: 14px;
+}
+
+figure{
+    width: 1226px;
+    height: 809px;
+    background-image: url(../images/phone_morning.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top:200px;
+    right: -300px;
+}
+
+figure p{
+    width: 540px;
+    height: 307px;
+    position: absolute;
+    left: 137px;
+    top: 100px;
+    line-height: 307px;
+    font-size: 60px;
+    color: #333;
+    text-indent: 50px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.cd1{
+    width: 600px;
+    position: absolute;
+    top: 30px;
+    left: -600px;
+    animation: cd1 110s linear infinite;
+}
+
+.cd2{
+    width: 700px;
+    position: absolute;
+    top:20px;
+    left:0;
+    animation: cd2 100s linear infinite;
+}
+
+@keyframes cd1{
+    0%{left:-600px}
+    100%{left:540px}
+}
+
+@keyframes cd2{
+    0%{left:0}
+    50%{left:540px}
+    50.001%{left:-700px}
+    100%{left:0}
+}
+
+
+/* 오전테마 */
+#wrap.morning{background-image: url(../images/bg_morning.jpg);}
+
+#wrap.morning h1{background-image: url(../images/logo_b.png);}
+
+#wrap.morning .gnb li{color: #555;}
+
+#wrap.morning .sns li{color: #555;}
+
+#wrap.morning h2{color: #666;}
+
+#wrap.morning h2 span{color:#111;}
+
+#wrap.morning figure{background-image: url(../images/phone_morning.png);}
+
+#wrap.morning figure a{color: #333;}
+
+
+
+#wrap.afternoon{background-image: url(../images/bg_afternoon.jpg);}
+
+#wrap.afternoon h1{background-image: url(../images/logo_b.png);}
+
+#wrap.afternoon .gnb li{color: #555;}
+
+#wrap.afternoon .sns li{color: #555;}
+
+#wrap.afternoon h2{color: #666;}
+
+#wrap.afternoon h2 span{color:#111;}
+
+#wrap.afternoon figure{background-image: url(../images/phone_afternoon.png);}
+
+#wrap.afternoon figure a{color: #333;}
+
+
+
+
+/* 오후테마 */
+#wrap.evening{background-image: url(../images/bg_evening.jpg);}
+
+#wrap.evening .logo{background-image: url(../images/logo_b.png);}
+
+#wrap.evening .gnb li{color: #fff;}
+
+#wrap.evening .sns li{color: #fff;}
+
+#wrap.evening h2{color: #fff;}
+
+#wrap.evening h2 span{color:#fff;}
+
+#wrap.evening figure{background-image: url(../images/phone_evening.png);}
+
+#wrap.evening figure a{color: #fff;}
+
+
+
+/* 밤테마 */
+#wrap.night{background-image: url(../images/bg_night.jpg);}
+
+#wrap.night .logo{background-image: url(../images/logo_b.png);}
+
+#wrap.night .gnb li{color: #fff;}
+
+#wrap.night .sns li{color: #fff;}
+
+#wrap.night h2{color: #bbb;}
+
+#wrap.night h2 span{color:#fff;}
+
+#wrap.night figure{background-image: url(../images/phone_night.png);}
+
+#wrap.night figure a{color: #fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

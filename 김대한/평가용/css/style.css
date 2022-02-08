@@ -1,0 +1,32 @@
+*{margin:0;
+  padding:0;}
+
+ul{list-style: none;}
+
+a{color:inherit;
+  text-decoration: inherit;}
+
+header{margin-left: auto;
+       margin-right: auto;
+       width: 980px;
+       position: relative;
+       border-top: 2px solid #3388ff;
+       margin-top:50px;}
+
+h1{padding-left:300px;}
+
+
+.gnb:after{content: '';
+           clear:both;
+           display: block;}
+
+.gnb li{float:left;
+        font-size: 20px;
+        margin-left: 80px;
+        }
+
+.mainBn{width:100%;
+        height: 500px;
+        background-image:url(../images/banner.png);
+        background-repeat: no-repeat;
+        background-position: 0 center;}

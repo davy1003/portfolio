@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate2</title>
+    <style>
+*{
+    margin:0;
+    padding:0;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.box{
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+    background-color: cornflowerblue;
+}
+
+.btn{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+ul{
+    list-style: none;
+}
+
+.snb{
+    color: #666;
+}
+
+.gnb{
+    display:flex;
+    justify-content: center;
+}
+
+.gnb>li{
+    width:25%;
+    text-align:center;
+    position: relative;
+}
+
+.gnb>li>a{
+    display: block;
+    background-color: lightcoral;
+    line-height: 30px;
+}
+
+.gnb>li>a:hover{
+    background-color: orchid;
+}
+
+.sub{
+    position: absolute;
+    left:0;
+    top: 30px;
+    width: 100%;
+    line-height: 22px;
+    background-color:#ccc;
+    display:none;
+}
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+<ul class="gnb">
+    <li><a href="#">list1</a>
+        <ul class="sub">
+            <li><a href="#">sub1</a></li>
+            <li><a href="#">sub2</a></li>
+            <li><a href="#">sub3</a></li>
+            <li><a href="#">sub4</a></li>
+            <li><a href="#">sub5</a></li>
+        </ul>
+    </li>
+
+    <li><a href="#">list2</a>
+        <ul class="sub">
+            <li><a href="#">sub1</a></li>
+            <li><a href="#">sub2</a></li>
+            <li><a href="#">sub3</a></li>
+            <li><a href="#">sub4</a></li>
+        </ul>
+    </li>
+
+    <li><a href="#">list3</a>
+        <ul class="sub">
+            <li><a href="#">sub1</a></li>
+            <li><a href="#">sub2</a></li>
+            <li><a href="#">sub3</a></li>
+        </ul>
+    </li>
+</ul>
+
+    <div class="btn">
+        <button class="up">올리기</button>
+        <button class="down">내리기</button>
+        <button class="toggle">토글</button>
+    </div>
+    <div class="box"></div>
+
+
+
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+
+$('.up').on('click',function(){
+    $('.box').slideUp();
+});
+
+$('.down').on('click',function(){
+    $('.box').slideDown();
+});
+
+$('.toggle').on('click',function(){
+    $('.box').slideToggle();
+});
+
+
+// gnb li에 마우스를 올리면 해당 sub가 slideDown됨
+// 마우스 떼면 slideUp
+
+$('.gnb').children('li').on('mouseover',function(){
+    $(this).children('.sub').stop().slideDown();
+}).on('mouseout',function(){
+    $(this).children('.sub').stop().slideUp();
+});
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

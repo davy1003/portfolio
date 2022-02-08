@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>grid1</title>
+        <style>
+            /* reset css */
+            *{
+                margin:0;
+                padding:0;
+            }
+
+            ul{list-style: none;}
+
+            a{
+                text-decoration: none;
+                color: white;
+            }
+
+            /* header 부분 */
+
+            .header{
+                height: 80px;
+                background-color: #000;
+            }
+
+            .wrap{
+                width: 1000px;
+                margin-left: auto;
+                margin-right: auto;
+                height: 80px;
+                position: relative;
+            }
+
+            h1{
+                font-size: 30px;
+                padding-top: 15px;
+            }
+
+            .list{
+                position: absolute;
+                top: 30px;
+                right: 0;
+            }
+
+            .list:after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+
+            .list li{
+                float: left;
+                margin-left: 30px;
+            }
+
+            .bn{
+                background-image: url(images/banner.jpg);
+                height: 500px;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+            }
+
+
+            .con1{
+                width: 1000px;
+
+                /* 
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 40px;
+                margin-bottom: 40px;
+
+                margin: 위아래 좌우
+               */
+                margin:40px auto;
+            }
+
+            .con1:after{
+                content:'';
+                clear: both;
+                display: block;
+            }
+
+            .con1 .box1{
+                width: 320px;
+                height: 180px;
+                background-color: dimgray;
+                float: left;
+                margin-right: 20px;
+            }
+
+            .con1 .box1:last-child{
+                margin-right: 0;
+            }
+
+            .con2{
+                width: 1000px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .con2:after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+
+            .con2 .box2{
+                width: 250px;
+                height: 200px;
+                background-color:#333333;
+                float: left;
+            }
+
+            .con2 .box2:nth-child(2){
+                width: 500px;
+                background-color:#dddddd;
+            }
+
+            .footer{
+                height: 120px;
+                background-color:#000000;
+                margin-top: 80px;
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+
+        <div class="header">
+            <div class="wrap">
+
+                <h1><a href="#">LOGO</a></h1>
+                <ul class="list">
+                    <li><a href="#">list1</a></li>
+                    <li><a href="#">list2</a></li>
+                    <li><a href="#">list3</a></li>
+                    <li><a href="#">list4</a></li>
+                    <li><a href="#">list5</a></li>
+                </ul><!--list-->
+            </div><!--wrap-->
+        </div><!--header-->
+
+        <div class="bn">
+        </div><!--bn-->
+
+        <div class="con1">
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+        </div><!--con1-->
+
+        <div class="con2">
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+        </div><!--con2-->
+        
+        <div class="footer"></div>
+    </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabmenu</title>
+    <style>
+*{margin:0;
+  padding:0;
+  list-style:none;}
+
+.tabmenu{
+    width: 600px;
+    border:10px solid #000;
+    margin: 40px auto;
+}
+
+.tit{display:flex;}
+
+.tit li{
+    border-bottom: 1px solid #000;
+    width: 25%;
+    height: 40px;
+    padding-top:12px;
+    text-align: center;
+    border-right: 1px solid #000;
+}
+
+.tit li:last-child{
+    border-right: 0;
+}
+
+li:nth-child(1){
+    background-color: black;
+    color: #fff;
+}
+
+li:hover{
+    background-color: black;
+    color: #fff;
+}
+
+.box{
+    height:400px;
+    line-height: 400px;
+    text-align:center;
+    font-size: 60px;
+    font-family: arial;
+    font-weight: 900;
+    display:none;
+}
+
+.box:nth-child(1){background-color: deeppink; display:block;}
+.box:nth-child(2){background-color: Dodgerblue;}
+.box:nth-child(3){background-color: Darkviolet;}
+.box:nth-child(4){background-color: Orangered;}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="tabmenu">
+        <ul class="tit">
+            <li>Deeppink</li>
+            <li>Dodgerblue</li>
+            <li>Darkviolet</li>
+            <li>Orangered</li>
+        </ul>
+
+        <div class="con">
+            <div class="box">Deeppink</div>
+            <div class="box">Dodgerblue</div>
+            <div class="box">Darkviolet</div>
+            <div class="box">Orangered</div>
+        </div>
+    </div>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+
+<script>
+
+// li를 클릭 했을 때,
+// 클릭한 li만
+// 백그라운드 색산#000, 글자 색상 #fff
+
+$('.tit li').on('click',function(){
+    $(this).css({'backgroundColor' : '#000',
+'color' : '#fff'}).siblings().css({
+    'backgroundColor' : '#fff',
+    'color' : '#000'
+});
+
+// li를 클릭 했을 때
+// 1. 클릭한 li의 인덱스넘버를 구해서 변수에 저장
+//    변수강 생성...하세요...
+// 2. 클릭한 li와 인덱스넘버 값이 맞는 .box를 display:block 적용
+// 3. 나머지는 .box들을 display:none 적용
+
+
+let i = $(this).index();
+$('.box').eq(i).show().siblings().hide();
+
+
+// hide() display:none
+// show() display:none을 제거
+
+
+});
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

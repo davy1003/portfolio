@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <script>
+
+
+        // function calc(x){
+        //     console.log(x + 2);
+        // }
+
+        // calc(5);
+
+
+// 함수:
+// 1. 어떤 값을 넣으면 그 값을 가공해서 뱉어내는 자판가 같은 역할
+// 2. 실행문들을 묶어서 저장하는 기능
+
+
+
+//함수는 구문들을 저장하는 공간
+//변수는 데이터를 저장하는 공간
+         
+        //함수이름짓기: 변수랑 똑같은 규칙
+function a(){
+    //변수에 데이터를 저장하듯이, 여러개의 다양한 실행문들을 
+    //하나의 공간에 저장해둘 수 있다
+    document.write("안녕하세요<br>");
+    document.write("반갑습니다<br>")
+    document.write("감사합니다<br>")
+
+    //장점: 재활용이 가능 하다
+}
+
+a();  //만들어준 함수는 반드시 호출해서 실행시켜줘야 실행된다
+a();
+a();
+
+
+
+
+
+
+
+         //매개변수: 값을 집어넣기 위한 장치
+function b(x){
+         //입력받은 값에 2를 곱하는 함수
+          document.write(x * 2);
+}
+
+b(7);
+
+//두 값을 입력 받으면 해당값의 평균을 구해주는 함수
+
+function c(x, y){
+    let result = (x + y) / 2;
+    document.write(result);
+}
+
+c(124, 320);
+c(200, 150);
+
+document.write('<hr>');
+
+//입력받은 숫자로 구구단 뽐는 함수
+//dan(2); -> 실행 시킴
+
+//2단
+// 2 x 2 = 4
+// 2 x 3 = 6
+// 2 x 4 = 8
+// 2 x 5 = 10
+// 2 x 6 = 12
+
+//dan(13); -> 실행 시킴
+// 13 x 1 = 13
+// 13 x 2 = 26
+// 13 x 3 = 39
+// 13 x 4 = 52
+// 13 x 5 = 65
+
+function dan(x){
+    document.write("<h3>"+x+"단</h3>")
+
+    for(let i = 2; i <= 9; i++){
+        // document.write(x + "x" + i + "=" + x*1 + "<br>");
+        document.write(`${x}X${i}=${x*i}<br>`);
+    }
+}
+
+    dan(13);
+    dan(2);
+    
+    prompt()
+    confirm()
+    alert()
+    document.write()
+    location.replace()
+    console.log()
+    
+
+
+
+//     document.write(x + "x 2 =" + x*2 + "<br>")
+//     document.write(x + "x 3 =" + x*3 + "<br>")
+//     document.write(x + "x 4 =" + x*4 + "<br>")
+//     document.write(x + "x 5 =" + x*5 + "<br>")
+//     document.write(x + "x 6 =" + x*6 + "<br>")
+//     document.write(x + "x 7 =" + x*7 + "<br>")
+//     document.write(x + "x 8 =" + x*8 + "<br>")
+//     document.write(x + "x 9 =" + x*9 + "<br>")
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

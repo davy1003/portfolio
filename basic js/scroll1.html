@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll1</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            right: 50px;
+            top: 50px;
+            background-color: pink;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        body{
+            height: 10000px;
+        }
+
+        .top{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: black;
+            color: #fff;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="box"></div>
+<div class="top">TOP</div>
+
+
+    <pre>
+    1. scroll 이벤트
+        .on('scroll',function(){})
+
+    2. scroll 값 구하기
+        .scrollTop();
+
+    3. scroll 애니메이션
+        .animate({'scrollTop' : ...})
+    </pre>
+
+
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+
+
+
+$(window).on('scroll',function(){
+    let scr = $(window).scrollTop();
+    //브라우저의 스크롤 위치값 구하는 것
+    $('.box').text(scr);
+
+    // 스크롤 휠을 내리다가 스크롤의 위치값이 5000이상이 될때
+    // 바디의 색깔을 #ccc로 바꾸기
+
+    if(scr>=5000){
+        $('body').css({'backgroundColor' : '#ccc'});
+    }else{
+        $('body').css({'backgroundColor' : 'transparent'});
+    }
+});
+
+$('.top').click(function(){
+
+    // 스크롤 애니메이션 = 스크롤을 부드럽게 움직이도록 한다
+    // 이때 반드시 선택자가 $('html, body')
+    $('html, body').animate({'scrollTop' : 0},1000);
+
+});
+
+let location2 = prompt('이동할 위치를 적어주세요');
+// 입력 받은 값까지 스크롤 부드럽게 이동하게 해주기
+$('html, body').animate({'scrollTop' : location2});
+
+
+</script>
+
+
+
+
+</body>
+</html>

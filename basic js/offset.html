@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offset</title>
+    <style>
+*{
+    margin:0;
+    padding:0;
+}
+
+div{
+    width: 200px;
+    border: 5px solid #000;
+    box-sizing: border-box;
+}
+
+.box1{height: 150px;}
+.box2{height: 300px;}
+.box3{height: 420px;}
+.box4{height: 600px;}
+.box5{height: 720px;}
+
+/* 1. 제이쿼리를 연결한다
+   2. 각각의 박스 내부에 각각의 박스가 가진 하이트 값을 출력한다
+   3.(제이쿼리 쓰세요... html 안에다가 직접 쓰지 말고) 
+   
+   */
+
+
+
+
+    </style>
+</head>
+<body>
+    
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<div class="box4"></div>
+<div class="box5"></div>
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+
+<script>
+
+$('div').each(function(){
+    let hig = $(this).height();
+    $(this).text(hig+10);
+});
+
+let a = $('.box1').offset().top;
+console.log(a);
+
+let b = $('.box2').offset().top;
+console.log(b);
+
+let c = $('.box3').offset().top;
+console.log(c);
+
+let d = $('.box4').offset().top;
+console.log(d);
+
+let e = $('.box5').offset().top;
+console.log(e);
+
+/*
+offset().top
+
+document의 최상단에서 해당 html요소의 상단까지의 거리값
+
+*/ 
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

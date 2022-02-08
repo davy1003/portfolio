@@ -1,0 +1,102 @@
+*{margin: 0;
+  padding: 0;}
+
+ul{list-style:none;}
+
+a{color: inherit;
+  text-decoration: none;}
+
+header{width: 980px;
+    height: 78px;
+    background-color: pink;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;}
+
+.gnb{position:absolute;
+     top:30px;
+     right: 0;}
+
+.gnb li:after{content: '';
+               clear: both;
+               display: block;}
+
+.gnb li{background-image: url(..images/line.jpg);
+        background-repeat: no repeat;
+        float:left;
+        margin-left: 15px;
+        padding-left: 15px;}
+        
+.gnb li:nth-child(1){background-image: none;}
+
+.mainBn{height: 600px;
+        background-image: url(../images/slider1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 0;}
+
+.mainBn a{display: block;
+          height: 600px;}
+
+.s1{width: 980px;
+    margin-right: auto;
+    margin-left: auto;}
+
+.s1 .con:after{content: '';
+               clear: both;
+               display: block;}
+
+
+.s1 .box{width: 326px;
+         float:left;
+         text-align: center;}
+
+.s1 h3{color: #b3917c;
+       font-size: 24px;
+       text-align: center;}
+
+.s1 h4{font-size: 18px;
+       margin-top: 14px;}
+
+.s2{background-image: url(../images/main.jpg);
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    padding-bottom: 40px;}
+
+.s2 .con{width: 980px;
+         margin-left: auto;
+         margin-right: auto;}
+
+.s2 h3{text-align:center;
+       padding-top: 40px;
+       margin-bottom: 30px;}
+
+.s2 .con:after{content: '';
+               clear:both;
+               display: block;}
+
+.s2 .box1{width: 470px;
+          height: 270px;
+          background-color: cyan;
+          float: left;}
+
+.s2 .box2{width: 482px;
+          background-color: rosybrown;
+          float: right;}
+
+.s2 .box2 div{width: 157px;
+              height: 130px;
+              float: left;
+              margin-bottom: 5px;
+              margin-right: 5px;}
+              /* ㅋㅋㅋㅋ너무 많이 띄웠어요 5px만 해주세요 */
+
+.s2 .box2 div:nth-child(3){margin-right: 0;}
+.s2 .box2 div:nth-child(6){margin-right: 0;}
+
+.s2 .box2 div img{width: 100%;
+                  height: 100%;}
+
+.s2 h3{font-size: 24px;
+       text-align: center;
+       color: #ffffff;}

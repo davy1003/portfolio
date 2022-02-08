@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testgrid</title>
+    <style>
+
+*{margin:0;
+  padding:0;}
+
+.wrap{
+    /*height: 100vh; 
+       display:flex를 적용시킨 부모의 자식들(flex item)은 기본적으로 모두 align-self:stretch 라고 하는 속성을 가진다 
+        부모의 높이만큼 자신의 높이를 늘려 가득 채우는 속성*/
+      display: flex;}
+
+ul{list-style: none;}
+
+a{text-decoration: none;}
+
+
+
+header{width: 170px;
+       background-image:linear-gradient(deeppink, gold, blue);}
+
+h1{color: #fff;
+   margin: 40px;}
+
+.gnb li{color: #fff;
+        font-size: 22px;
+        line-height: 70px;
+        padding-left: 30px;
+        border-bottom:1px solid #ccc;}
+
+main{width:100%;}
+
+.mainBn{width:100%;
+        height: 500px;
+        background-color:gold;}
+
+.pager{display:flex;
+       justify-content: center;}
+
+.pager a{width: 15px;
+         height: 15px;
+         border-radius: 50%;
+         background-color: greenyellow;
+         margin-top: 450px;
+         margin-left: 15px;}
+
+.row{display:flex;
+     justify-content: space-around;}
+
+.row div{width: 280px;
+         height: 280px;
+         background-color: indigo;
+         border-radius: 50%;
+         margin-top:40px;}
+
+footer{margin: 100px;}
+
+h3{background-color: #333;
+    height: 40px;
+    color: #fff;
+    padding-left: 20px;
+    padding-top: 20px;}
+
+.fmenu{background-color: khaki;
+       line-height: 40px;}
+
+.fmenu li{position: relative;
+          margin-left:10px;}
+
+.fmenu p{position: absolute;
+         top:0;
+         right: 10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="wrap">
+    <header>
+        <h1>LOGO</h1>
+
+        <ul class="gnb">
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li>list4</li>
+            <li>list5</li>
+            <li>list6</li>
+        </ul>
+    </header>
+
+    <main>
+        
+        <div class="mainBn">
+            <div class="pager">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box4"></div>
+        </div>
+    
+        <footer>
+            <h3>공지사항</h3>
+
+            <ul class="fmenu">
+                <li>
+                    [공지] 공지사항 내용 들어가는 부분
+                    <p>03-12</p>
+                </li>
+                <li>
+                    [공지] 공지사항 내용 들어가는 부분
+                    <p>03-12</p>
+                </li>
+                <li>
+                    [공지] 공지사항 내용 들어가는 부분
+                    <p>03-12</p>
+                </li>
+                <li>
+                    [공지] 공지사항 내용 들어가는 부분
+                    <p>03-12</p>
+                </li>
+                <li>
+                    [공지] 공지사항 내용 들어가는 부분
+                    <p>03-12</p>
+                </li>
+            </ul>
+        </footer>
+    </main>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

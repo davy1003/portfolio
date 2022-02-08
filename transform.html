@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+<title>Document</title>
+    <style>
+        .box{width: 200px;
+             height:200px;
+             background-color: palevioletred;
+             }
+
+        .box1:hover{transform: skew(60deg);}
+
+        .box2:hover{transform: rotate(90deg);}
+
+        .box3:hover{transform: rotateX(180deg);}
+
+        .box4:hover{transform: rotateY(180deg);}
+
+        .con .box{float:left;}
+
+        .con .box:hover{transform: scale(2);}
+
+        .con::after{content: '';
+           clear:both;
+          display:block;}
+
+          .container:after{content: '';
+                 clear: both;
+                display: block;}
+
+                .container{width: 652px;
+                        margin: 40px auto;
+                         position:relative;}
+
+        .container .box{float: left;
+                        margin-right: 20px;
+                       margin-bottom: 20px;}
+
+        .container .box:nth-child(3n){margin-right: 0;}
+
+        .container .box:nth-child(2){position: absolute;
+                       left: 50px;
+                        top: 50px;}
+
+        .container .box:nth-child(3){transform: translate(50px, 50px);}
+
+
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+
+    <div class="con">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+</body>
+</html>

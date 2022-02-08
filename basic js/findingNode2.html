@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;
+          padding: 0;}
+
+        body *{margin: 10px;
+        padding:10px;
+        font-size: 16px;
+    border:1px solid #ccc;}
+
+.select, h1, .apple{background-color: #ddd;
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        div, #wrap
+        <header>
+        header
+        <h1>h1</h1>
+        <ul class="gnb">
+            .gnb
+            <li>.gnb li1</li>
+            <li>.gnb li2</li>
+            <li>.gnb li3</li>
+            <li>.gnb li4</li>
+            <li>.gnb li5</li>
+        </ul>
+
+        <ul class="util">
+            ul, .util
+        <li>.util li1</li>
+        <li class="hi"> .util li2 .hi</li>
+        <li>.util li3</li>
+        <li>.util li4</li>
+
+        </ul>
+
+        </header>
+
+        <main>
+main
+  <div class="content">
+    div, content
+    <div>
+       div
+        <p>p</p>
+        <p>p</p>
+    </div>
+
+    <div>
+    div
+     <p class="apple">p, .apple</p>
+     <p>p</p>
+    </div>
+
+    <div>
+    div
+     <p>p</p>
+     <p>p</p>
+    </div>
+
+
+  </div>
+
+<div class="container">
+    div, .container
+    <div class="space">
+        div, .space
+        <div class="thumb">
+            div, .thumb
+        </div>
+
+        <div class="txt">
+            div, txt
+            <p>p</p>
+            <p>p</p>
+        </div>
+    </div>
+
+    <div class="space">
+        div, space
+        <div class="thumb">
+            div, .thumb
+        </div>
+        <div class="txt">
+            div, .txt
+            <p>p</p>
+            <p>p</p>
+        </div>
+    </div>
+</div>
+
+</main>
+
+    <footer>
+        footer
+        <h2>h2</h2>
+        <div class="fWrap">
+            div, .fWrap
+            <ul>
+                <li>li1</li>
+                <li class="select">li2</li>
+                <li>li3</li>
+                <li>li4</li>
+            </ul>
+
+            <ul>
+                ul
+                <li>li1</li>
+                <li>li2</li>
+                <li>li3</li>
+                <li>li4</li>
+            </ul>
+        </div>
+    </footer>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    // h2(푸터에 있음)에서 시작을 해서, fWrap안에 있는 ul들 중 첫번째 ul내부의 3번째 li를 찾아서 보더색상 black, 보더굵기 3px
+    $('h2').siblings('.fWrap').children('ul').eq(0).children('li').eq(2).css({'borderColor' : 'black','borderWidth' : '3px'});
+
+    // h1에서 시작 $('h1')
+    // .gnb내부의 네번째 li에게 백그라운드 색상 pink
+    $('h1').siblings('.gnb').children('li').eq(3).css({'backgroundColor' : 'pink'});
+
+    // h1에서 시작,
+    // .util 내부의 두번째 li에게 백그라운드 색상 skyblue
+    $('h1').siblings('.util').children('.hi').css({'backgroundColor' : 'skyblue'});
+
+    // 조상찾기 parents() 모든 조상찾기
+    // parents(선택자) 모든 조상들중 해당조상 찾기
+    $('.hi').parents('body').css({'border' : '5px solid #f06'});
+
+    // parent() 바로 위의 부모 선택
+    $('.apple').parent().css({'border' : '5px solid #08f'});
+
+    // h2에서 시작해서, h1까지 가서 백그라운드 색상 gold
+
+    $('h2').parents('footer').siblings('header').children('h1').css({'backgroundColor' : 'gold'});
+
+    $('h2').parents('#wrap').find('h1').css({'backgroundColor' : 'gold'});
+
+    // .apple에서 시작해서, .content안의 첫번째 div 내부의 첫번째 p 까지가서 백그라운드 색상 skyblue
+
+    $('.apple').parent().prev().children('p').first().css({'backgroundColor' : 'skyblue'});
+
+    // $('h1')에서 시작해서, .container 내부의 space들 중 첫번째의 thumb 까지 가서 백그라운드 색상 pink
+
+    $('.h1').parent()
+    .siblings('main')
+    .children('.container')
+    .children('.space')
+    .eq(0)
+    .children('.thumb')
+    .css({'backgroundColor' : 'pink'});
+
+    // $('.hi')에서 시작해서 footer안에 들어잇는 ul중 두번째 ul의 세번째 li에게 백그라운드 색상 lightblue
+    
+    $('.hi').parents('header').siblings('footer').children('.fwrap').children('ul').eq(1).children('li').eq(2).css({'backgroundColor' : 'lightblue'});
+
+    // .apple에서 시작해서.container안에 두번째 space의 .txt div의 보더를 4px solid #000으로 변경
+
+    $('.apple').parents('main').children('.container').children('.space').eq(1).children('.txt').css({'border' : '4px solid #000'});
+
+// 자식 찾기
+// 1. children() 그냥 쓰면, 모든자식찾기
+//    children(선택자) 모든 자식들 중 선택자 찾기
+
+// 2. find(선택자) 모든 자손들 중 선택자 찾기
+
+// 순서로 찾기
+// 1. first(), last() 항렬중 가장 첫번째 찾기, 마지막거 찾기
+
+// 2. eq(n) 항렬 중 인덱스넘버로 찾기
+
+// 형제 찾기
+// 1. prev(), next() 자신의 앞,뒤의 형제 찾기
+
+// 2. siblings() 그냥 쓰면 모든 형제 찾기 : 자기자신을 제외한 모든 항렬 선택
+//    siblings(선택자) 모든 형제들 중 해당 선택자 찾기
+
+// 부모 찾기
+// 1. parents()그냥 쓰면 모든 선택자 찾기
+//  parents(선택자) 모든 조상들 중 해당 선택자 찾기
+
+// 2.parent() 바로 위 부모 찾기(직계부모)
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

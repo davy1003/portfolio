@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> layout3 </title>
+        <style>
+            .con{width: 940px;
+                height:400px;
+                background-color: #ccc;
+                margin-right: auto;
+                margin-left: auto;}
+
+            .con .box:last-child{margin-right: 0;}
+
+            .con:after{content: '';
+                 clear: both;
+                 display: block;}
+
+            .box{width: 300px;
+                  height: 400px;
+                  background-color: cyan;
+                  float: left;
+                  margin-right: 20px;
+                  text-align: center;}
+
+            .thum{width: 220px;
+                 height: 110px;
+                background-color: gold;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;}
+
+            .h1{text-align: center;}
+            .p{text-align: center;}
+
+            
+        </style>
+    </head>
+    <body>
+    
+        <div class="con">
+          <div class="box">
+          <div class="thum"></div>
+          <h1> 오늘의 책 </h1>
+          <p> 2021-09-14 </p>
+         </div>
+        
+       
+        <div class="box"> 
+          <div class="thum"></div>
+          <h1> 오늘의 영화 </h1>
+          <p> 2021-09-14 </p>
+          </div>
+
+          <div class="box"> 
+            <div class="thum"></div>
+            <h1> 오늘의 음반 </h1>
+            <p> 2021-09-14 </p>
+          </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 500px;
+            background-color: lightblue;
+            margin-bottom: 40px;
+        }
+/* 
+height: nn% 가 작동하는 경우 
+
+1. 부모가 css상에서 명시된 height값을 가지고 있을 경우 
+2. position:absolute를 적용시켰을 경우 
+
+*/
+
+
+        .box1{
+            height: 500px;
+        }
+
+        .box2{
+
+        }
+
+        .box div{
+            background-color:cadetblue;
+            height: 100%;
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box box1">box1
+        <div class="item1"></div>
+    </div>
+
+    <div class="box box2">box2<br>yaho<br>
+        <img src="../images/logo.png">
+        <div class="item2"></div>
+    </div>
+
+
+
+</body>
+</html>

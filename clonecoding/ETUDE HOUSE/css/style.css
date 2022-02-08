@@ -1,0 +1,376 @@
+*{margin: 0;
+  padding:0;}
+
+ul{list-style: none;}
+
+a{text-decoration: none;
+  color: inherit;}
+
+img{vertical-align: top;}
+
+button{border:0;
+       background-color: transparent;}
+
+.topBn{height: 30px;
+       background-image: url(../images/topbn_bg.png);
+       background-repeat: no-repeat;
+       background-size: cover;
+       color: #fff;
+       font-size:12px;
+       position:relative;
+       padding:0 15px;
+       line-height: 30px;}
+
+.topBn button{position: absolute;
+              right: 15px;
+              top: 7px;}
+
+.topBn button img{width: 15px;}
+
+.hTop{
+      height: 55px;
+      position:relative;
+    border-bottom: 1px solid #ccc;}
+
+h1{text-align:center;
+   padding-top:5px;}
+
+h1 img{width: 53px;}
+
+.menuBtn{background-color: #ddd;
+         padding: 20px 10px;
+         position:absolute;
+         left:15px;
+         top:0;}
+
+.menuBtn span{display:block;
+              width: 20px;
+              height: 2px;
+              background-color: #222;
+              margin-bottom:4px;}
+
+.menuBtn span:last-child{margin-bottom: 0;}
+
+.myBtn{height: 55px;
+       width: 30px;
+       position:absolute;
+       left: 60px;
+       top: 0;}
+
+.myBtn img{width: 20px;}
+
+.srchBtn{width: 30px;
+        height: 55px;
+        position: absolute;
+    right: 70px;
+    top:0;}
+
+.srchBtn img{width: 17px;}
+
+.cartBtn{width:50px;
+             height: 55px;
+             right:15px;
+             top:0;
+             position: absolute;}
+
+.cartBtn img{width: 19px;}
+
+.cartBtn span{display: block;
+              width: 12px;
+              height: 12px;
+              background-color: hotpink;
+              border:1px solid #fff;
+              text-align: center;
+              font-size: 10px;
+              line-height: 10px;
+              border-radius: 50%;
+              color:#fff;
+              position:absolute;
+              bottom:14px;
+              right: 12px;}
+
+nav{border-bottom: 1px solid #ccc;
+    position:relative;
+    overflow-X:hidden;
+    width: 100%;}
+
+nav ul{padding-left: 15px;
+       width: 600px;}
+
+nav ul:after{content:'';
+             clear: both;
+             display: block;}
+
+nav li{float:left;
+       padding:0 5px;
+       font-size:12px;
+       line-height: 38px;}
+
+.navBtn{width: 28px;
+        height: 38px;
+        position:absolute;
+        right: 0;
+        top: 0;
+        border-left: 1px solid #ccc;
+        background-color: #fff;}
+
+.navBtn img{width: 12px;}
+
+.mainBn img{width: 100%;}
+
+.main {background-color: #eee;}
+
+.product{background-color: #fff;
+         position: relative;
+         padding-bottom: 20px;} 
+          
+.product .more{font-size:14px;
+               color:#666;
+               background-image: url(../images/a2.png);
+               background-repeat: no-repeat;
+               background-size: auto 10px;
+               background-position: right center;
+               padding-right: 12px;
+               position:absolute;
+               top:15px;
+               right:15px;}
+
+.product h3{font-size: 16px;
+            color:#333;
+            font-weight:bold;
+            padding-left: 15px;
+            border-bottom: 1px solid #bbb;
+            line-height: 50px;}
+
+.product .con:after{content: '';
+                    clear:both;
+                    display:block;}
+
+
+.product .item{float:left;
+               width: 50%;
+               font-size: 14px;
+               text-align: center;}
+
+.product .item img{height: 135px;}
+
+.product .tit{font-weight:bold;}
+
+.product .price .del{text-decoration: line-through;
+                     color:#666;
+                     font-size: 10px;}
+
+.product .con{margin: 20px 0;}
+
+.product .pager{font-size: 0;
+                text-align:center;}
+ 
+.product .pager a{display: inline-block;
+                  width: 8px;
+                  height: 8px;
+                  background-color: #ddd;
+                  border-radius: 50%;
+                  margin:0 2px;}
+
+.subBtn img{width: 100%;}
+
+.subBn img{width: 100%;}
+
+.tabs ul:after{content: '';
+               clear:both;
+               display:block;}
+
+.tabs li{width: 12.5%;
+         height: 40px;
+         text-indent: -9999px;
+         float:left;}
+
+.tabs li:nth-child(1){background-color: #fe692f;}
+.tabs li:nth-child(2){background-color: #fd9a86;}
+.tabs li:nth-child(3){background-color: #da8d71;}
+.tabs li:nth-child(4){background-color: #fe7d6a;}
+.tabs li:nth-child(5){background-color: #f36551;}
+.tabs li:nth-child(6){background-color: #d097b3;}
+.tabs li:nth-child(7){background-color: #ef6da0;}
+.tabs li:nth-child(8){background-color: #b262e2;}
+
+.tabs .active{background-image: url(../images/check.png);
+              background-repeat: no-repeat;
+              background-size: 11px auto;
+              background-position:center;}
+
+.content{width: 100%;
+         height: 100px;
+         border: 10px solid #fe792f;
+         background-image: url('../images/tab1.png');
+         background-repeat: no-repeat;
+         background-size: 120px auto;
+         background-color: #fff;
+         padding: 20px 0 50px;}
+
+.tabs .txt{padding-left:140px;}
+
+.tabs .name{color:#666;}
+
+.tabs p{font-size:14px;}
+
+
+
+.quickMenu ul:after{content: '';
+                    clear: both;
+                    display: block;}
+
+.quickMenu li{width:50%;
+              float:left;
+              box-sizing:border-box;
+              height: 68px;
+              background-color: #fff;
+              border-bottom: 1px solid #ccc;
+              background-repeat: no-repeat;
+              background-size: 26px auto;
+              background-position: 15px center;
+              position: relative;}
+
+.quickMenu li a{display:block;
+                height:100%;}
+
+.quickMenu li p{position: absolute;
+                top:50%;
+                left: 50px;
+                transform:translateY(-50%);}
+
+/* :after, :before 
+    선택자의 내부에 첫번째 자식(before)혹은
+    마지막 자식(after)를 추가하는 css의 가상선택자
+    
+    주로 html상에 새로운 태그로 추가할 필요가 없는 
+    (중요도가 떨어지는) 장식적인 요소들의 삽입용도로 많이 사용한다*/
+
+.quickMenu li:after{content: '';
+                    display: block;
+                    width: 7px;
+                    height: 12px;
+                    background-color: pink;
+                    background-image: url(../images/a3.png);
+                    background-repeat: no-repeat;
+                    background-size: 7px auto;
+                    position: absolute;
+                    top:50%;
+                    right:15px;
+                    transform: translateY(-50%);}                
+
+.q1{background-image: url(../images/b1.png);}
+.q2{background-image: url(../images/b2.png);}
+.q3{background-image: url(../images/b3.png);}
+.q4{background-image: url(../images/b4.png);}
+.q5{background-image: url(../images/b5.png);}
+.q6{background-image: url(../images/b6.png);}
+.q7{background-image: url(../images/b7.png);}
+.q8{background-image: url(../images/b8.png);}
+
+/* nth-child(odd) 홀수값 잡기
+   nth-child(even) 짝수값 잡기 */
+.quickMenu li:nth-child(odd){border-right: 1px solid #ccc;}
+
+.quickMenu{border-top:1px solid #ccc;
+           margin:10px 0;}
+
+.notice:after{content: '';
+              clear: both;
+              display: block;}
+
+.notice{background-color: #fff;
+        line-height: 40px;
+        border-bottom: 1px solid #fff;
+        padding:0 15px;}
+
+.notice h3{float: left;
+           font-size: 14px;
+           margin-right: 15px;}
+
+.notice .context{float:left;
+                 font-size:14px;}
+
+.notice .more{float:right;
+              display:block;
+              padding:14px 0;
+              line-height: 1;}
+
+.notice .more img{width: 12px;}
+
+footer{background-color: #dcdcdc;
+       text-align: center;
+       color:#666;
+       font-size:12px;
+       padding: 0;}
+
+.fmenu{font-size: 0;}
+
+.fmenu li{font-size:12px;
+          display:inline-block;}
+
+.fmenu li:after{content: '|';
+                margin:0 4px;}
+
+.fmenu li:last-child:after{content:none;}
+
+.sns img{width:32px;}
+
+.sns li{display:inline-block;
+        margin:0 4px;}
+
+.sns{margin:15px 0;
+     font-size:0;}
+
+address{font-style:normal;
+        line-height:20px;}
+
+.call{margin-top:10px;}
+
+.call a{border:1px solid #aaa;
+        display:inline-block;
+        font-size:12px;
+        padding-top:3px;
+        padding-bottom: 3px;
+        margin:0 4px;
+        padding-right:3px;
+        background-image: url(../images/ico_tel.png);
+        background-repeat: no-repeat;
+        background-size: auto 12px;
+        background-position: 3px center;
+        padding-left: 16px;}
+
+.fmenu2{font-size:0;
+        margin:10px 0;}
+
+.fmenu2 li{display:inline-block;
+           font-size:12px;}
+
+.fmenu li:nth-child(1):after{content: '|';
+                             margin: 0 4px;}
+
+.fmenu li:nth-child(2):after{content: '|';
+                             margin: 0 4px;}
+
+.fmenu2 li:last-child{display: block;}
+
+footer .txt{line-height: 20px;}
+
+.life{height: 76px;
+      margin:10px 0;}
+
+.download{color: #ccc;
+          border-top:1px solid #ccc;
+          border-bottom:1px solid #ccc;
+          line-height: 35px;
+          background-color: #fff;
+          margin-top:20px;}
+
+.download span{color:#666;}
+
+
+
+
+body{height: 5000px;}
+
+

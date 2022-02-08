@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resposive3</title>
+    <style>
+
+*{margin: 0;
+  padding: 0;}
+
+ul{list-style: none;}
+
+header{background-color: darkviolet;
+       color:#fff;
+       font-size: 20px;
+       height: 50px;}
+
+h1{line-height: 50px;
+    text-align:center;}
+
+.gnb{display: none;}
+/* 모바일에서는 숨김처리 */
+
+.mainBn{height: 320px;
+        background-color: dodgerblue;}
+
+.wrap{padding:0 15px;}
+
+
+.con1 .box{background-color: red;
+           height: 150px;
+           margin-top: 15px;}
+
+.con2{margin-top:2px;}
+
+.con2:after{content: '';
+            clear:both;
+            display:block;}
+
+.con2 .item{width: calc(50% - 2px);
+            height: 170px;
+            background-color: green;
+            margin-top:15px;
+            margin-bottom: 4px;
+            float: left;
+            }
+
+
+.con2 .item:nth-child(2n){margin-left: 4px;}
+
+footer{background-color: royalblue;
+       color:#fff;
+       padding: 15px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width:1200px)
+{
+
+header{height: 100px;}
+
+.gnb{display:block;}
+
+.hwrap{width:1000px;
+       background-color: pink;
+       margin-left: auto;
+       margin-right: auto;
+       position: relative;}
+
+h1{text-align: left;
+    padding-top:20px;}
+
+.gnb:after{content: '';
+           clear:both;
+           display:block;}
+
+.gnb li{float: left;
+         margin-left: 20px;}
+
+.gnb{position: absolute;
+     top:30px;
+     right:0;}
+
+.mainBn{height:500px;
+        background-color: gold;}
+
+.wrap{width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding:0;}
+
+.con1:after{content: '';
+            clear:both;
+            display: block;}
+
+.con1{margin-top: 15px;}
+
+.con1 .box{margin-top: 0;
+           width: 320px;
+           height: 320px;
+           float:left;
+           margin-right: 20px;}
+
+.con1 .box:last-child{margin-right: 0;}
+
+/* .con2 .item:nth-child(1){} 
+    .con2 .item{}*/
+
+/* .con2 .item{width: 235px;
+            margin-left: 20px !important;}
+                                 /* 모든 우선순위를 다 무시하고 무조건 적으로 1순위로 적용시킴 */
+
+/* .con2 .item:nth-child(1){margin-left: 0 !important;} */ 
+
+.con2 .item:nth-child(2n){margin-left: 0;}
+
+.con2 .item{width: 235px;
+            margin-right: 20px;}
+
+.con2 .item:last-child{margin-right: 0;}
+
+footer{height: 80px;}
+
+.fmenu li{display: inline-block;
+}
+
+.fmenu{text-align: center;
+       font-size: 0;}
+
+.fmenu li:after{content:'|';
+                margin: 0 4px;}
+
+.fmenu li:last-child:after{content: none;}
+
+
+
+
+
+
+
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hwrap">
+
+        <h1>LOGO</h1>
+            <ul class="gnb">
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+                <li>list4</li>
+                <li>list5</li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="mainBn"></div>
+
+    <div class="wrap">
+        <div class="con1">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <div class="con2">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+
+    <footer>
+        <ul class="fmenu">
+            <li>fmenu1</li>
+            <li>fmenu2</li>
+            <li>fmenu3</li>
+            <li>fmenu4</li>
+        </ul>
+    </footer>
+
+</body>
+</html>

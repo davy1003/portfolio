@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>animation</title>
+
+    <style>
+        *{margin:0;
+          padding: 0;}
+
+        .box{width: 200px;
+           height: 200px;
+           background-color: turquoise;}
+
+        .box1{margin: 40px auto;
+              animation-name:box1;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+             animation-direction: alternate;
+            animation-timing-function: linear;}
+
+        @keyframes box1{0%{transform: scale(1);}
+        100%{transform: scale(4);}
+        }
+
+        .intro{margin:100px 0;
+               font-size: 46px;
+               font-weight: bolder;
+               text-align: center;}
+
+
+       .intro div{animation-name:intro;
+                 animation-duration: 1s;
+                 opacity: 0;
+                 transform: translateY(40px);
+                 animation-fill-mode: forwards;}
+
+        .intro .txt2{animation-delay: 0.5s;}
+
+        @keyframes intro{0%{opacity: 0;
+                            transform: translateY(40px);}
+
+                        100%{opacity: 1;
+                            transform: translateY(0);}
+        }
+        
+        .box2{margin: 40px auto;
+              border-radius: 50%;
+              animation:box2 13s infinite;
+              animation-timing--function: cubic--bezier(0.25, 0.46, 0.);}
+
+              @keyframes box2{0%{border-radius: 50%;
+                               background-color: turquoise;}
+
+                             20%{}
+                        
+            }
+            
+    @keyframes scale-easeInOutBounce {
+	0% {
+		transform: scale(1);
+	}
+
+	2% {
+		transform: scale(0.99);
+	}
+
+	4% {
+		transform: scale(1);
+	}
+
+	10% {
+		transform: scale(0.97);
+	}
+
+	14% {
+		transform: scale(0.99);
+	}
+
+	22% {
+		transform: scale(0.88);
+	}
+
+	32% {
+		transform: scale(0.99);
+	}
+
+	42% {
+		transform: scale(0.6);
+	}
+
+	50% {
+		transform: scale(0.5);
+	}
+
+	58% {
+		transform: scale(0.4);
+	}
+
+	68% {
+		transform: scale(0.01);
+	}
+
+	78% {
+		transform: scale(0.12);
+	}
+
+	86% {
+		transform: scale(0.01);
+	}
+
+	90% {
+		transform: scale(0.03);
+	}
+
+	96% {
+		transform: scale(0);
+	}
+
+	98% {
+		transform: scale(0.01);
+	}
+
+	100% {
+		transform: scale(0);
+	}
+
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="intro">
+        <div class="txt1">안녕하세요</div>
+        <div class="txt2">딸기의 블로그 입니다</div>
+    </div>
+
+    <div class="box box1">box1</div>
+
+    <div class="box box2">box2</div>
+     
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout4-2</title>
+        <style>
+            .box1{
+                width: 940px;
+                height: 185px;
+                background-color: blue;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .box2{
+                height: 480px;
+                background-color: blueviolet;
+            }
+
+            .con:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            
+
+            .con{
+                width: 940px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+            }
+            .con div{
+                width: 300px;
+                height: 200px;
+                float: left;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+
+            .box3{
+                background-color:deeppink;
+            }
+
+            .box4{
+                background-color:skyblue;
+            }
+
+            .con div:nth-child(3){margin-right: 0;}
+            .con div:nth-child(6){margin-right: 0;}
+
+            .box5{
+                height: 185px;
+                background-color:navy;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="box1"></div>
+        <div class="box2"></div>
+
+        <div class="con">
+            <div class="box3"></div>
+            <div class="box3"></div>
+            <div class="box3"></div>
+
+            <div class="box4"></div>
+            <div class="box4"></div>
+            <div class="box4"></div>
+        </div>
+
+        <div class="box5"></div>
+
+
+    </body>
+</html>

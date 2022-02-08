@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate3</title>
+    <style>
+
+.box{
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+    background-color: cornflowerblue;
+}
+
+.btn{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="btn">
+        <button class="fade">사라지기</button>
+        <button class="show">나타나기</button>
+        <button class="toggle">토글</button>
+    </div>
+    <div class="box"></div>
+
+
+
+<script src="js/jquery-3.6.0.min.js"></script>    
+
+<script>
+
+// fade는 기본적으로
+// fadeIn -> display:none 이 사라지고, opacity값이 빠르게 증가
+// fadeOut -> opacity값이 빠르게 감소하다 0이 되는 순간, display:block;
+// AOS 사이트: 애니메이션 효과 사이트
+
+
+
+
+
+
+
+
+$('.fade').on('click',function(){
+    $('.box').fadeOut();
+});
+
+$('.show').on('click',function(){
+    $('.box').fadeIn();
+});
+
+$('.toggle').on('click',function(){
+    $('.box').fadeToggle(50000);
+});
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>grid1</title>
+        <style>
+           *{margin: 0;
+             padding: 0;}
+
+        ul{list-style: none;
+           Position: absolute;
+           top: 30px;
+           position:relative;}
+
+        a{
+            text-decoration: none;
+            color:#fff;
+        }
+
+        .header{
+            height: 80px;
+            background-color: black;
+        }
+
+        .wrap{
+            width: 1000px;
+            /* 가운데 놓읍시다 */
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        h1{font-size: 30px;
+           padding-top: 15px;}
+
+
+        /* 
+            .list는 안의 li들을 가로정렬 시킨 다음,
+            .list를 통째로 오른쪽에 가져다 놓으세요!!
+            한번 해보세용 ㅋㅋㅋ
+        
+        */
+       .list li{
+           float: left;
+           margin-left: 30px;}
+        
+        .list:after{content: '';
+                    CLEAR: both;
+                display: block;}
+
+        .list{
+            position: absolute;
+            top:30px;
+            right: 0;
+        }
+
+        .bn{
+            height: 500px;
+            background-image: url(imges/banner.jpg);
+            background-size: cover;
+        }
+
+        .con1{
+            width: 1000px;
+            margin-right: auto;
+           margin-left: auto; 
+        margin-top: 40px;
+    margin-bottom: 40px;}
+             
+    .con1:after{content:'';
+               clear: both;
+               display: block;}
+
+        .con1 .box1{
+            width: 320PX;
+           height: 180px;
+         background-color: dimgray;
+        float:left;
+        margin-right: 20px;}
+
+        .con1 .box1:last-child{
+            margin-right: 0;
+        }
+
+        .con2{
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        
+        }
+
+        .con2:after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+
+        .con2 .box2{
+            width: 250px;
+            height: 200px;
+            background-color:#333333;
+            float: left;
+        }
+
+        .con2 .box2:nth-child(2){
+            width: 500px;
+            background-color:#dddddd
+        }
+
+        .footer{
+            height: 80px;
+            background-color:#000000;
+            margin-top: 80px;
+        }
+
+        </style>
+    </head>
+    <body>
+    <div class="header">
+        <div class="wrap">
+        <h1><a href="#">LOGO</a></h1>
+        <ul class="list">
+            <li><a href="#">list1</a></li>
+            <li><a href="#">list2</a></li>
+            <li><a href="#">list3</a></li>
+            <li><a href="#">list4</a></li>
+            <li><a href="#">list5</a></li>
+        </ul>
+    </div>
+    </div>
+
+    <div class="bn"></div>
+
+    <div class="con1">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+    </div>
+
+    <div class="con2">
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+    </div><!--con2-->
+
+    <div class="footer"></div>
+    </body>
+</html>

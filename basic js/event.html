@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <style>
+*{margin:0;
+  padding:0;}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.container div{width: 200px;
+               height: 200px;
+               background-color: #ccc;}
+
+ul{
+    list-style: none;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+ul li{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: pink;
+    margin: 0 10px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+    </div>
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+
+<script>
+    $('.box1').on('click',function(){
+        $('.box1').css({'backgroundColor' : 'pink'});
+    });
+
+    // box2를 클릭하면 width가 300px 가 됨
+    $('.box2').on('click',function(){
+        $('.box2').css({'width' : '300px'});
+    });
+
+    $('.box3').on('click',function(){
+        $('.box3').css({'backgroundColor' : 'darkviolet'});
+    }).on('mouseout',function(){
+        $('.box3').css({'backgroundColor' : '#ccc'});
+    });
+
+// box4 마우스 올리면 너비 350px, 내리면 너비 다시 200px
+// box5 마우스 올리면 색상 navy, 너비는 300px
+// 마우스 다시 떼면 색상 blue, 너비는 다시 200px
+
+    $('.box4').on('click',function(){
+        $('.box4').css({'width' : '350px'});
+    }).on('mouseout',function(){
+        $('.box4').css({'width' : '200px'});
+    });
+
+    $('.box5').on('click',function(){
+        $('.box5').css({'backgroundColor' : 'navy', 'width' : '300px'});
+    }).on('mouseout',function(){
+        $('.box5').css({'backgroundColor' : 'blue', 'width' : '200px'});
+    });
+
+
+
+
+
+// li 클릭하면 색깔 빨간색으로 바꾸기
+
+// this 타겟 : 내가 지금 클릭한거, 내가 지금 마우스 올린거
+$('li').on('click',function(){
+    $(this).css({'backgroundColor' : 'red'});
+    $(this).siblings().css({'backgroundColor' : 'pink'});
+
+    let i = $(this).index(); //인덱스를 구하는거
+    console.log(i);
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

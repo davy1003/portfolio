@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> header7 </title>
+    <style>
+        *{margin: 0;
+          padding: 0;}
+
+        ul{list-style: none;}
+
+        a{text-decoration: none;
+          color: #000;}
+
+        .header{border-bottom: #41413d 1px solid;}
+        
+        .wrap{width:1000px;
+            height: 180px;
+            background-color: lightblue;
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;}
+
+        h1{padding-top: 50px;
+           text-align: center;}
+
+        .list li{display:inline-block;
+             font-size: 18px;
+            margin-right: auto;
+            margin-left: auto;}
+
+        .util:after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+        .util{
+            position: absolute;
+            top: 12px;
+            right: 0;
+            /* 이제 해결하세용~ */
+        }
+        .util li{margin-left: 20px;
+            float: left;
+            font-size: 12px;
+        }
+
+    .util li a{color: #666;}
+
+    .list{font-size: 16px;
+    display:block;}
+
+        </style>
+</head>
+<body>
+    <div class="header">
+    <div class="wrap">
+    <h1><a href="#">
+        <img src="imges/logo.png"alt="smokin'' whale">
+    </a></h1>
+
+    <ul class="util">
+        <li><a href="#"> Login</a></li>
+        <li><a href="#"> join</a></li>
+    </ul>
+
+    <ul class="list">
+        <li><a href="#">SHOP</a><li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">STUDIO</a></li>
+        <li><a href="#">COLLECTIONS</a></li>
+    </ul>
+    </div>
+</div>
+</body>
+
+
+</html>

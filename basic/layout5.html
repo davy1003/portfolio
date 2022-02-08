@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title> layout5 </title>
+    <style>
+        .box1{height:90px;
+               border-bottom: 2px solid blue;}
+
+               /* h1은 클래스가 아니라 태그이름이므로 .이 필요없어요~ */
+        h1{font-size: 32px;
+            text-align: center;}
+        
+        .box2{height: 420px;
+               background-color: gray;
+            }
+
+        .con1{
+            width: 940px;
+            margin-left: auto;
+            margin-right: auto;}
+
+        .con1:after{Content: '';
+                   clear: both;
+                   display: block;}
+
+        .con1 .box3{
+            width: 205px;
+              height: 190px;
+            background-color: black;
+            margin-right: 35px;
+            float:left;}
+
+            .con1 .box3:nth-child(2){
+                width: 460px;
+            }
+            /* 단위빼먹었어요 ㅋㅋㅋㅋ  달라지는 건 margin-right 가 아니라 width죠? 그래서 width값을 바꿔주시면 되요*/
+            .con1 .box3:last-child{margin-right: 0;}
+
+            .con2{width:940px;
+               margin-left: auto;
+                margin-right: auto;}
+
+            .con2 .box4{width: 205px;
+                            height: 200px;
+                        background-color: crimson;
+                         float:left;}
+
+            .con .box4:nth-child(2){width: 530px;
+                                 background-color: grey;}
+        
+    
+
+              /* 잘하고있어요 계속 해보세용~ 일단 html파트는 다 맞아요css도 "얼추"ㅋㅋㅋ 다맞음  */
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <h1> 로고 </h1>
+    </div>
+    <div class="box2"></div>
+    <div class="con1">
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+    </div>
+    <div class="con2">
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+    </div>
+    <div class="box5"></div>
+</body>
+</html>

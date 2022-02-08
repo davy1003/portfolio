@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htmlText</title>
+    <style>
+
+.result{
+    width: 280px;
+    border: 5px inset #ccc;
+    background-color: black;
+    padding:10px;
+    line-height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color:gold;
+    margin: 40px auto;
+}
+
+
+.btns{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btns button{
+    display:block;
+    height: 40px;
+    border:5px outset #ccc;
+    color:#333;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.btns button:active{
+    background-color: #999;
+    border:5px inset #888;
+}
+
+h3{
+   margin:0;
+   padding:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+</head>
+<body>
+    
+<div class="result">_</div>
+
+
+<div class="btns">
+    <button class="btn1">안녕하세요</button>
+    <button class="btn2"><h3>반갑습니다</h3></button>
+    <button class="btn3"></button>
+    <button class="btn4"></button>
+    <button class="btn5"></button>
+</div>
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+
+<script>
+// text()
+// html()
+
+// 두 가지의 용법을 가지고 있다
+
+// 1. $(선택자).text('텍스트');
+//    선택자 내부의 해당 텍스트를 삽입
+
+// 2. $(선택자).text();
+// 선택자 내부의 텍스트를 추출
+// (이 경우 변수에 저장하든 다른 곳에 삽입을 하던지 해야 한다)
+
+// 클릭한 버튼 내부의 텍스트를 출력
+
+
+$('.btn3').text('감사합니다');
+$('.btn4').text('<h3>하이</h3>');
+$('.btn5').html('<h3>하이</h3>');
+
+
+$('.btns button').on('click',function(){
+    let txt = $(this).text() //해당 요소의 내부의 텍스트를 추출
+
+    $('.result').text(txt);
+});
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

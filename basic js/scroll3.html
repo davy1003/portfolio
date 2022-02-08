@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+
+
+section{
+    height: 100vh;
+}
+
+.s1{
+    background-color: red;
+    background-image: url(images/image1.jpg);
+    background-size: cover;
+    background-position: center;
+    position:relative;
+}
+
+.pointer{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.4);
+    backdrop-filter: blur(15px);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+
+.s2{
+    background-color: orangered;
+}
+
+.s3{
+    background-color: orange;
+}
+
+.s4{
+    background-color: gold;
+}
+
+.s5{
+    background-color: yellow;
+}
+
+
+ul{
+    list-style: none;
+}
+
+.pager{
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pager li{
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.pager li.on{
+    background-color: #fff;
+    transform: scale(1.5);
+}
+
+.pager li:hover{
+    transform: scale(1.5);
+}
+
+.pager li:last-child{
+    margin-bottom: 0;
+}
+
+h1{
+    font-size: 100px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top:350px;
+    width: 100%;
+    font-family: arial;
+    font-weight: 900;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+<ul class="pager">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+    <div id = "wrap">
+        <section class="s1">
+            <div class="pointer"></div>
+            <h1>Have A Nice Day</h1>
+        </section>
+        <section class="s2"></section>
+        <section class="s3"></section>
+        <section class="s4"></section>
+        <section class="s5"></section>
+    </div>
+
+
+
+
+    
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script>
+
+// .pager의 li를 클릭하면
+// 클릭한 li에게"만" class on 붙이기
+// 클릭한 li와 index 값이 맞는 섹션의 offset Top까지 스크롤 애니메이트 하기
+
+$('.pager li').on('click',function(){
+    $(this).addClass('on').siblings().removeClass('on');
+    let i = $(this).index();
+    let section = $('#wrap').children().eq(i).offset().top;
+
+    $('html, body').animate({'scrollTop' : section});
+});
+
+
+$(window).on('scroll',function(){
+    let scr = $(window).scrollTop();
+
+    let section2 = $('.s2').offset().top;
+    let section3 = $('.s3').offset().top;
+    let section4 = $('.s4').offset().top;
+    let section5 = $('.s5').offset().top;
+
+if(scr >= 0 && scr < section2){
+    $('.pager li').eq(0).addClass('on').siblings().removeClass('on');
+}
+if(scr >= section2 && scr < section3){
+    $('.pager li').eq(1).addClass('on').siblings().removeClass('on');
+}
+if(scr >= section3 && scr < section4){
+    $('.pager li').eq(2).addClass('on').siblings().removeClass('on');
+}
+if(scr >= section4 && scr < section5){
+    $('.pager li').eq(3).addClass('on').siblings().removeClass('on');
+}
+if(scr >= section5){
+    $('.pager li').eq(4).addClass('on').siblings().removeClass('on');
+}
+
+
+});
+
+
+
+/*
+스크롤 움직일 때,
+
+0~두번째 섹션의 탑까지 = 첫번째 li에 클래스 on 붙이기
+두번째 섹션의 탑 ~ 세번째 섹션의 탑까지 = 두번째 li에 클래스 on 붙이기
+세번째 섹션의 탑 ~ 네번째 섹션의 탑까지 = 세번쨰 li에 클래스 on 붙이기
+네번째 섹션의 탑 ~ 다섯번째 섹션의 탑까지 = 네번쨰 li에 클래스 on 붙이기
+다섯번째 섹션의 탑 ~ 다섯번째 li에 클래스 on 붙이기
+*/ 
+
+$('#wrap section').on('mousewheel',function(e,d){
+
+if(d>0){
+    // 마우스 휠을 올릴 때 일어날 일
+    // 휠을 움직인 해당 섹션의 상단 섹션의 offsetTop으로 스크롤이 이동
+
+    let prv = $(this).prev().offset().top;
+    $('html, body').stop().animate({'scrollTop' : prv});
+
+}else if(d<0){
+    // 마우스 휠을 내릴 때 일어날 일
+    // 휠을 움직인 해당 섹션의 하단 섹션의 offsetTop으로 스크롤이 이동
+
+    let nxt = $(this).next().offset().top;
+    $('html, body').stop().animate({'scrollTop' : nxt});
+}
+
+
+});
+
+$('.s1').on('mousemove',function(e){
+    
+    let x = e.pageX;
+    let y = e.pageY;
+
+    console.log(x,y);
+
+    $('.pointer').css({
+        'left' : x,
+        'top' : y
+    });
+
+    $('h1').css({
+        'left' : 0 - (x/14),
+        'top' : 350 - (y/14)
+    })
+});
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

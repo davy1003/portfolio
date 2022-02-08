@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+            border:10px solid #000;
+            margin: 20px auto;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+<!-- javascript - 브라우저를 제어하기 위한 스크립트 언어 -->
+<div class="box1"></div>
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    // let box1 = document.querySelector('.box1');
+    // box1.addEventListener('click',function(){
+    //     box1.style.backgroundColor = 'red'
+    // });
+
+    $('.box1').click(function(){
+       $('.box1').css('backgroundColor','red');
+    });
+
+    // 1. 제이쿼리 간단하다 - css와 문법이 비슷
+    // 2. 전부 무료 (그리고 쉼없이 업데이트 된다....)
+    // 3. $() 제이쿼리를 불러오는 함수
+    // 4. 제이쿼리를 쓰기 위해서는 상단에 파일을 연결해야 한다
+</script>
+
+
+
+</body>
+</html>

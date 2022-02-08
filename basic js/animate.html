@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate</title>
+    <link rel="stylesheet" href="js/slick.css">
+    <style>
+*{
+    margin:0;
+    padding:0;
+}
+
+#wrap{
+    width: 100%;
+    height: 100vh;
+    background-color: beige;
+    position: relative;
+}
+
+.round{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: salmon;
+    position:absolute;
+    left: 20px;
+    top: 20px;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+    /* 
+    animation-name: round1 5s infinite alternate linear
+    */
+}
+
+.round.on{
+    animation-name: round1;
+}
+
+@keyframes round1{
+    0%{
+        left:20px;
+    }
+    100%{
+        left:60%;
+    }
+}
+
+.move{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.s1{
+    height: 1200px;
+    background-color: lightcoral;
+}
+
+.s2{
+    height: 1800px;
+    background-color: cornflowerblue;
+    position: relative;
+}
+
+.s2 .txt{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.s2 h2{
+    font-size: 80px;
+    opacity: 0;
+    transform: translateY(60px);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* p는 h2 보다 0.6초 느리게 */
+
+.txt p{
+    font-size: 32px;
+    font-weight: bold;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(60px);
+    animation-duration: 1s;
+    animation-delay: 0.6s;
+}
+
+.txt.on h2{animation-name: txt1;}
+.txt.on p{animation-name: txt1;}
+
+@keyframes txt1{
+    0%{opacity: 0; transform: translateY(60px);}
+    100%{opacity: 1; transform: translateY(0);}
+}
+
+.s3{
+    height: 2000px;
+    background-color: tomato;
+    padding-top: 200px;
+}
+
+.s4{
+    height: 1400px;
+    background-color: turquoise;
+}
+
+.slide{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide .box{
+    height: 800px;
+}
+
+.box1{background-color: red;}
+.box2{background-color: orangered;}
+.box3{background-color: orange;}
+.box4{background-color: gold;}
+.box5{background-color: yellow;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+    <div id="wrap">
+        <div class="round"></div>
+            
+        <button class="move">움직이기</button>
+    </div>
+
+<div class="con">
+    <section class="s1"></section>
+    <section class="s2">
+        <div class="txt">
+            <h2>안녕하세요</h2>
+            <p>저의 블로그에 오신것을 환영 합니다</p>
+        </div>
+    </section>
+    <section class="s3">
+        <div class="slide">
+            <div class="box1 box"></div>
+            <div class="box2 box"></div>
+            <div class="box3 box"></div>
+            <div class="box4 box"></div>
+            <div class="box5 box"></div>
+        </div>
+    </section>
+    <section class="s4"></section>
+</div>
+
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src ="js/slick.js"></script>
+<script>
+
+$('.slide').slick();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$('.move').on('click',function(){
+    $('.round').toggleClass('on');
+});
+
+$(window).on('scroll',function(){
+    let scr = $(window).scrollTop()
+
+    let s2 = $('.s2').offset().top;
+
+    if(scr>=(s2+400)){
+    $('.txt').addClass('on');
+    }
+});
+
+
+
+</script>
+
+</body>
+</html>

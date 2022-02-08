@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attr</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+.box{
+    width: 600px;
+    background-color: blue;
+    margin: 40px auto;
+}
+
+.box img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box"><img class="test"></div>
+
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+
+    $('.test').attr('src','images/image1.jpg');
+    //attribute HTML 요소의 속성을 지정하고 속성값을 줄 수 있음
+
+    $('.box').append('<img>'); //append() 마지막 자식 추가
+    // append() 해당 요소에 마지막 자식을 추가
+    // prepend() 해당 요소에 첫번째 자식을 추가
+    
+    $('.box').prepend('<h1></h1>');
+    $('.box').children('h1').text('안녕하세요');
+    $('.box').children('img').last().attr('src','images/image2.jpg');
+
+    
+</script>
+
+
+</html>

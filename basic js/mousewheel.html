@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mousewheel</title>
+    <style>
+
+*{
+    margin:0;
+    padding:0;
+}
+
+.wrap{
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+<div class="wrap">
+    <h1></h1>
+<pre>
+mousewheel.js는 플러그인 > 마우스의 휠의 움직임을 감자해서
+이벤트로 설정 할 수 있게 해준다
+(제이쿼리에는 마우스흴 자체의 이벤트가 없다)
+
+외부 플러그인이기 때문에, 제작가 만들어준 공식을 따라야 
+정확하게 사용할 수 있다
+
+공식:$(선택자).on('mousewheel',function(e,d){
+
+    if(d>0){
+        마우스 휠을 올렸을 때 일어나는 일
+    }else if(d<lt;0){
+        마우스 휠을 내렸을 때 일어나는 일
+    }
+    
+});
+
+
+</pre>
+
+
+
+
+
+
+</div>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script>
+
+$('.wrap').on('mousewheel',function(e,d){
+    if(d>0){
+        // 마우스를 올렸을 때 일어날 일
+        $('h1').text("마우스를 올렸습니다");
+        $('.wrap').css({'backgroundColor' : 'pink'});
+    }else if(d>0){
+        // 마우스를 내렸을 때 일어날 일
+        $('h1').text("마우스를 내렸습니다")
+        $('.wrap').css({'backgroundColor' : 'blue'});
+    }
+
+});
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

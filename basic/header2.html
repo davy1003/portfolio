@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 헤더 만들기 </title>
+        <style>
+            *{margin: 0;
+             padding: 0;}
+
+        .header{width: 800px;
+             height: 80px;
+            background: #dddddd;
+            position: relative;}
+
+        h1{font-size: 40px;}
+        
+        ul:after{content:'';
+                clear: both;
+                display: block;}
+        ul li{float: left;
+        margin-right: 40px;}
+
+        ul {list-style: none;
+            font-size: 18px;
+            position: absolute;
+            left: 120px;
+            top: 30px;
+           }
+         /*  letter-spacing 이 왜 들어가있져...???/ 요거 자간 띄우는 건데
+         어쩌다가 섞여들어갔네요 빼주심 됩니다*/
+        a{COLOR: #000;
+            text-decoration: none;}
+
+            
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1><a href="#">LOGO</a></h1>
+        <ul>
+           <li><a href="#">list1</a> </li> 
+           <li><a href="#">list2</a> </li>
+           <li><a href="#">list3</a> </li>
+           <li><a href="#">list4</a> </li>
+           <li><a href="#">list5</a> </li>
+           <li><a href="#">list6</a> </li>
+        </ul>
+    </div>
+</body>
+</html>

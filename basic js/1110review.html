@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1110review</title>
+    <style>
+*{margin:0;
+  padding:0;}
+
+.con{background-color: #ddd;
+     width: 1440px;
+     margin: 40px auto;
+     display:flex;
+     justify-content: space-around;
+     padding: 20px 0;}
+
+.box{width: 300px;
+     height: 300px;
+     background-color: pink;}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+<div class="con">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+<pre>
+1. 제이쿼리 연결
+2. .con의 첫번째 .box를 클릭하면 백그라운드 색상 red
+3. .con의 두번째 .box를 클릭하면 백그라운드 색상 gold, 너비 350px
+4. .con의 세번째 .box를 클릭하면 해당 박스 제외 나머지 박스들 보더 5px solid #000
+5. .con의 네번째 .box에 마우스를 올리면 백그라운드 색상 darkviolet, 마우스 내리면 다시 원상 복구
+</pre>
+
+
+
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+
+<script>
+
+// let box = $('.con').chidren('.box');
+
+
+
+
+
+$('.box').eq(0).on('click',function(){
+    $('.box').eq(0).css({'backgroundColor' : 'red'});
+});
+
+$('.box').eq(1).on('click',function(){
+    $('.box').eq(1).css({'backgroundColor' : 'gold','width' : '350px'});
+});
+
+$('.box').eq(2).on('click',function(){
+    $('.box').eq(2).siblings().css({'border' : '5px solid #000'});
+});
+
+$('.box').eq(3).on('click',function(){
+    $(this).css({'backgroundColor' : 'darkviolet'});
+}).on('mouseout',function(){
+    $(this).css({'backgroundColor' : 'pink'});
+});
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

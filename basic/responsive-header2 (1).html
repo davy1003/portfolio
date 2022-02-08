@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header2</title>
+    <style>
+
+*{margin:0;
+  padding:0;}
+        
+ul{list-style: none;}
+
+header{height:50px;
+       background-color:#000;}
+
+h1{font-size: 26px;
+   text-align: center;
+   color:#eee;
+   line-height: 50px;
+   font-family: sans-serif;}
+
+button{background-color:transparent;
+       border:0;}
+
+.menu{width: 50px;
+      height:50px;
+      background-color:#333;
+      position: absolute;
+      top:0;
+      left:0;}
+
+.menu span{display: block;
+           width: 22px;
+           height:3px;
+           margin-bottom: 4px;
+           margin-left: auto;
+           margin-right: auto;
+           background-color:#eee;}
+
+        
+
+.menu span:last-child{margin-bottom: 0;}
+
+.my{position: absolute;
+    top: 0;
+    right:0;
+    font-size: 18px;
+    color:#eee;
+    background-color:#333;
+    text-align: center;
+    width:50px;
+    height: 50px;}
+
+nav{position: fixed;
+    top:0;
+    left:-100%;
+    width:100%;
+    background-color: rgba(0,0,0,0.8);
+    height: 100%;
+    color:#eee;
+    font-family: sans-serif;
+    z-index: 999;}
+
+.close{font-size: 30px;
+       width: 50px;
+       height:50px;
+       position: absolute;
+       left:0;
+       top:0;
+       text-align: center;
+       color:#fff;}
+
+.srch{width:50px;
+      height: 50px;
+      background-color:#333;
+      text-align: center;
+      position: absolute;
+      top:0;
+      right: 0;}
+
+.srch img{width: 25px;}
+
+.util{margin-top: 40px;
+      text-align: center;
+      font-size: 0;}
+
+.util li{display: inline-block;
+         font-size: 12px;}
+
+.util li:after{content: '|';
+               margin:0 4px;}
+
+.util li:last-child:after{content: none;}
+
+.gnb{padding-left: 20px;
+     margin-top: 40px;}
+
+.gnb li{font-size: 26px;
+        margin-bottom: 20px;}
+
+.sbox{width: 100%;
+      padding:15px 0;
+      background-color:#333;
+      margin-top:50px;
+      display: none;}
+
+.sbox form{position: relative;
+           width: 60%;
+           margin-left: auto;
+           margin-right: auto;}
+
+.sbox input{width: 100%;
+            height:30px;
+            border:0;
+            border-radius: 100px;
+            padding-left: 20px;
+            box-sizing: border-box;}
+
+.sbox button{position: absolute;
+             right:0;
+             top:0;
+             background-color:#000;
+             width: 25px;
+             height: 30px;
+             border-radius: 0 100px 100px 0;}
+            /* border-radius-left-top: 0;
+               border-radius-right-top:100px;
+               border-radius-right-bottom:100px;
+               border-radius-left-bottom:0;
+
+               border-radius: 왼쪽상단부터 시계방향대로 
+            */
+        
+.sbox button img{width: 15px;}
+
+
+
+.mainBn img{width: 100%;}
+
+.mainBn .pc{display: none;}
+
+
+
+
+
+
+
+
+
+@media all and (min-width:800px)
+{
+
+    .mainBn .mobile{display:none;}
+
+    .mainBn .pc{display: block;}
+}
+
+
+
+
+
+@media all and (min-width:1440px){
+
+header{height:140px}
+
+.hwrap{width: 1200px;
+       position: relative;
+       height:140px;
+       margin-left: auto;
+       margin-right: auto;}
+
+nav{position: absolute;
+    left:0;
+    background-color: transparent;}
+
+.menu, .close, .srch, .my{display: none;}
+
+.util{position: absolute;
+      right:0;
+      top:20px;
+      margin:0;}
+
+h1{font-size: 38px;
+   padding-top: 35px;}
+
+.gnb{text-align: center;
+     font-size: 0;
+     margin-top: 100px;}
+
+.gnb li{font-size: 20px;
+        display: inline-block;
+        margin:0 20px}
+
+.sbox{display: block;
+      width: auto;
+      position: absolute;
+      top:20px;
+      left:0;
+      background-color:transparent;
+      margin:0;
+      padding:0;}
+
+.sbox form{width: 200px;}
+
+.sbox form input{background-color:transparent;
+                 border-radius: 0;
+                 color:#fff;
+                 border:1px solid #fff;}
+
+.sbox form button{border-radius: 0;
+                  background-color: transparent;}
+
+
+
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="hwrap">
+            <h1>LOGO</h1>
+
+            <button class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button><!--menu-->
+
+            <button class="my">
+                my
+            </button><!--my-->
+
+            <nav>
+                <button class="close">
+                    X
+                </button><!--close-->
+
+                <button class="srch">
+                <img src="images/srch.png">
+                </button><!--srch-->
+
+                <div class="sbox">
+                    <form action="search.php">
+                        <input type="search" name="srch" class="srchinput">
+                        <button><img src="images/srch.png"></button>
+                    </form>
+                </div><!--sbox-->
+
+
+
+                <ul class="util">
+                    <li>Log in</li>
+                    <li>Join</li>
+                    <li>Cs Center</li>
+                </ul><!--util-->
+
+                <ul class="gnb">
+                    <li>List1</li>
+                    <li>List2</li>
+                    <li>List3</li>
+                    <li>List4</li>
+                    <li>List5</li>
+                </ul><!--gnb-->
+            </nav>
+        </div><!--hwrap-->
+    </header>
+
+    <div class="mainBn">
+        <a href="#">
+            <img src="images/bn_mo.png" class="mobile">
+            <img src="images/bn_pc.png" class="pc">
+        </a>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('.menu').click(function(){
+            $('nav').animate({'left' : 0})
+        });
+
+        // .close를 누르면 nav가 left -100%로 이동
+
+        $('.close').click(function(){
+          $('nav').animate({'left' : '-100%'});
+        });
+
+        $('.srch').click(function(){
+          $('.sbox').slideToggle();
+        });
+
+$(widow).resize(function(){
+
+    let width = $(window).width();
+
+    if(width >= 1440){
+
+      $('nav').css({'left' : 0});
+      $('.sbox').css({'display':'block'});
+
+    }else{
+        $('nav').css({'left' : '-100%'});
+        $('sbox').css({'display' : 'none'});
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title> float 가로정렬속성 </title>
+       <style>
+           .con{background-color: slateblue;}
+           .con:after{ content: '';
+                        clear: both;
+                        display: block;
+       }
+          .box{width: 200px;
+               height: 200px;
+               border:2px solid #000;
+               background-color: cyan;
+               float: left;}
+
+            .con2{background-color: pink;}
+
+            /* con2!!  그리고 ::after나 :after나 사실 같은 놈이긴 한데요 그냥 :는 한번만 써주세요
+            그래야 나중에 안헷갈려요~ */
+            .con2:after{content: '';
+                        clear: both;
+                    display: block;}
+
+          .box2{width: 300px;
+                height: 300px;
+                background-color: slateblue;
+                float: left;}
+
+
+
+       </style>
+</head>
+<body>
+
+<div class="con">
+   <div class="box"> </div>
+   <div class="box"> </div>
+   <div class="box"> </div>
+   <div class="box"> </div>
+   </div>
+
+   <div class="con2">
+     <div class="box2"></div>
+     <div class="box2"></div>
+     <div class="box2"></div>
+   </div>
+</body>
+</html>

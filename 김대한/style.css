@@ -1,0 +1,226 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+body{
+    border-top: 2px solid #50b5ff;
+}
+header{
+    height: 57px;
+    width: 1092px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+h1{
+    padding-top: 10px;
+}
+
+.gnb{
+    position: absolute;
+    top: 15px;
+    left:200px;
+}
+.gnb li{
+    float: left;
+    font-weight: bold;
+    color:#363636;
+    margin-left: 50px;
+}
+
+.util{
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+
+.util .srch{
+    width: 143px;
+    height: 25px;
+    border:1px solid #ccc;
+    padding-left: 10px;
+    background-image: url(../images/icon_search2.png);
+    background-repeat: no-repeat;
+    background-position: 153px center;
+    padding-right: 25px;
+}
+
+.util button{
+    border: 1px solid rgba(0,0,0,0.5);
+    border-left: 0;
+    width: 54px;
+    height: 28px;
+    color:#fff;
+    font-size: 12px;
+}
+
+.login{
+    background-color:#f49600;
+}
+
+.join{
+    background-color: #50b5ff;
+}
+
+.mv{
+    height: 454px;
+    background-image: url(../images/key_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mv .txt{
+    text-align: center;
+    color: #fff;
+    padding-top: 80px;
+}
+
+.mv h2{
+    font-size: 40px;
+}
+
+.mv .txt p{
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.mv .srchBox{
+    width:560px;
+    padding:20px;
+    /* padding을 상하좌우로 주게 됨!!! */
+    height: 100px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    margin: 60px auto 0;
+}
+
+form{
+    width: 560px;
+    position: relative;
+}
+form input{
+    width: 560px;
+    border:0;
+    height: 50px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    /* 패딩과 보더를 내부 너비 안쪽에다가 만듬
+     -> 패딩과 보더를 줬을 시 기존의 너비와 높이가 늘어나지 않습니다! 
+    */
+}
+
+form button{
+    width: 50px;
+    height: 50px;
+    /* background-color: transparent; */
+    background-color:unset;
+    position: absolute;
+    top:0;
+    right: 0;
+    border:0;
+}
+
+.keyword{
+    color: #fff;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.keyword:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.keyword .rec{
+    float: left;
+}
+
+.keyword .map{
+    float: right;
+}
+
+.keyword .rec a:hover{
+    text-decoration: underline;
+}
+
+/* s1 */
+
+.s1{
+    margin-top: 80px;
+}
+
+.s1 h3{
+    font-size: 26px;
+    color:#333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.s1 .con{
+    width: 1092px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.s1 .con .box{
+    float: left;
+    width: 348px;
+    margin-right: 24px;
+}
+
+.s1 .con .box:last-child{
+    margin-right: 0;
+}
+
+.s1 .con:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.s1 h4{
+    color: #0087ea;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.s1 p{
+    color:#666;
+    font-size: 14px;
+}
+
+.s1 .box img{
+    transition: all 1.5s;
+    /* transition 지연효과
+    tmransition: property(적용될대상) duration(적용될시간)
+    */
+}
+
+.s1 .box:hover img{
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
+
+    /* box-shadow: 가로축이동 세로축이동 크기(블러) 색상 */
+}
+
+
+.s1 .more{
+    text-align: center;
+    color:#f49600;
+    font-size: 14px;
+    margin-top: 25px;
+    text-decoration:underline;
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+</head>
+<body>
+    <script>
+
+
+//만약 값이 1111이면, "청소가 당첨"
+//값이 2222이면, "맥북 당첨"
+//값이 3333이면, "상품권 당첨"
+//값이 4444이면, "아이폰 당첨"
+//값이 5555이면, "냉장고 당첨"
+//해당사항이 없으면 -> 꽝입니다!!!
+
+
+// let num = prompt("경품번호를 입력해주세요");
+
+// num = parseInt(num);
+// let result;
+
+// if(num == 1111){
+//     result = "청소기당첨"
+// }else if(num == 2222){
+//     result = "맥북 당첨"
+// }else if(num == 3333){
+//     result = "상품권 당첨"
+// }else if(num == 4444){
+//     result = "아이폰 당첨"
+// }else if(num == 5555){
+//     result = "냉장고 당첨"
+// }else{
+//     result = "꽝입니다"
+// }
+
+
+
+// switch 선택은
+// switch(비교대상){
+//    case 비교값 : 비교값이 참일때 실행 될 실행구문;//   
+//    break;
+//    case 2222 : result ="맥북당첨";
+//    break;
+//    case 2222 : result ="맥북당첨";
+//    break;
+//    default : 해당라는 case가 없을 때 실행되는 구문
+
+
+
+//   }
+
+
+// let num = prompt("경품번호를 입력해주세요");
+
+// num = parseInt(num);
+// let result;
+
+// switch(num){
+//     case 1111 : result ="청소기 당첨";
+//     break;
+//     case 2222 : result ="맥북 당첨";
+//     break;
+//     case 3333 : result ="상품권 당첨";
+//     break;
+//     case 4444 : result ="아이폰 당첨";
+//     break;
+//     case 5555 : result ="냉장고 당첨";
+//     break;
+//     default : result ="꽝입니다"
+// }
+
+// console.log(result);
+
+
+
+// let now = prompt("오늘은 무슨 요일이죠")
+
+// "월" > 9:30분 도착
+// "화" > 9:15분 도착
+// "수" > 휴무입니다
+// "목" > 9:45분 도착
+// "금" > 휴무입니다
+// "토" > 1:30분 도착
+// "일" > 1:25분 도착
+
+
+// let now = prompt("오늘은 무슨 요일이죠?");
+// now = parseInt(now);
+// let result;
+
+// switch(now){
+//   case "월" : result = "9:30분 도착";
+//   break;
+//   case "화" : result = "9:15분 도착";
+//   break;
+//   case "수" : result = "휴무입니다";
+//   break;
+//   case "목" : result = "9:45분 도착";
+//   break;
+//   case "금" : result = "휴무입니다";
+//   break;
+//   case "토" : result = "1:30분 도착";
+//   break;
+//   case "일" : result = "1:25분 도착";
+//   break;
+//   default : result = "제대로된값을입력해주세요"
+// }
+// console.log(result);
+
+
+
+
+// location.replace
+
+// let site = prompt("자주이용 하는 사이트");
+// let result;
+
+// switch(site){
+//     case "다음" : result = "https://daum.net/";
+//     break;
+//     case "네이버" : result = "https://naver.com/";
+//     break;
+//     case "구글" : result = "https://goole.com/";
+//     break;
+//     case "네이트" : result = "https://nate.com/";
+//     break;
+//     default : document.write("해당사항없음")
+// }
+
+// // result에 값이 있으면 true 없으면 (undefined, null) false
+// if(result){
+// location.replace(result);
+// }
+
+
+
+
+
+
+// 다음 -> https://daum.net/으로 이동
+// 네이버 -> https://naver.com/으로 이동
+// 구글 -> https://goole.com/으로 이동
+// 네이트 -> https://nate.com/으로 이동
+
+
+
+
+
+
+let season = prompt("계절을 입력해주세요");
+let result;
+
+switch(season){
+    case "봄" : result = "아메리카노 1+1 행사";
+    break;
+    case "여름" : result = "생과일주스 40% 할인 행사";
+    break;
+    case "가을" : result = "비오는 날 쿠키 무료";
+    break;
+    case "겨울" : result = "조각케익 30% 할인";
+    break;
+    default : alert("제대로 된 값을 입력해주세요!");
+}
+
+
+if(result){
+    console.log(result);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

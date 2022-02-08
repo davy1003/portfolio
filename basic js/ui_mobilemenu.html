@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui_mobilemenu</title>
+    <style>
+*{
+    margin:0;
+    padding:0;
+}
+
+ul{
+    list-style: none;
+}
+
+.screen{
+        width: 400px;
+        height: 765px;
+        border:2px solid #000;
+        border-radius: 5px;
+        margin: 100px auto 0;
+        position: relative;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+}
+
+h1{
+    text-align: center;
+}
+
+.menu{
+    background-color: #333;
+    width: 50px;
+    height: 50px;
+    position:absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+}
+
+.menu span{
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+    margin: 2px auto;
+}
+
+nav{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    background-color: mediumblue;
+    top:0;
+    left:-60%;
+    color: #fff;
+}
+
+.gnb{
+    margin-left: 20px;
+    margin-top: 50px;
+    line-height: 50px;
+    font-size: 24px;
+}
+
+.srch{
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    position:absolute;
+    left: 0;
+    top: 0;
+    border:0;
+}
+
+.round{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    display: block;
+    position:absolute;
+    left: 7px;
+    top: 12px;
+}
+
+.bar{
+    display: block;
+    width: 2px;
+    height: 10px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+    position:absolute;
+    left: 31px;
+    bottom: 7px;
+}
+
+.srchBox{
+    width: 100%;
+    position: absolute;
+    top:50px;
+    left: 0;
+    background-color: mediumblue;
+    padding: 40px 0;
+    text-align: center;
+    display:none;
+}
+
+input{
+    width: calc(100% - 80px);
+    background-color: transparent;
+    border:0;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    padding: 5px 0;
+}
+
+input::placeholder{
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+<div class="screen">
+    <header>
+        <h1>LOGO</h1>
+        <button class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <button class="srch">
+            <span class="round"></span>
+            <span class="bar"></span>
+        </button>
+
+        <div class="srchBox">
+            <input type="text" placeholder="검색어를 입력해주세요">
+        </div>
+    </header>
+
+    <nav>
+        <ul class="gnb">
+            <li>List1</li>
+            <li>List2</li>
+            <li>List3</li>
+            <li>List4</li>
+            <li>List5</li>
+            <li>List6</li>
+        </ul>
+    </nav>
+</div>
+
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+
+// .menu 버튼 누르면
+// nav 가 스르륵 스크린 안으로 들어오기 -> 사이드 메뉴 띄우기
+// 다시 클릭하면 스르르르 밖으로 나가기
+
+let onOff = true;
+
+$('.menu').on('click',function(){
+    onOff = !onOff; //논리부정연산자, 
+                    // true를 false로, false를 true
+
+
+    if(onOff == false){
+    $('nav').animate({'left' : 0});
+    }else{
+        $('nav').stop().animate({'left' : '-60%'});
+    }
+    console.log(onOff);
+});
+
+
+// .srch 버튼을 누르면 
+// .srchBox가 슬라이드 다운
+// 버튼을 다시 한번 더 누르면
+// .srchBox가 슬라이드업
+
+
+$('.srch').on('click',function(){
+    $('.srchBox').stop().slideToggle();
+});
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
